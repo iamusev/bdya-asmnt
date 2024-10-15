@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>16 Personality Factor Questionnaire</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .question-block {
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #report {
+      margin-top: 30px;
+    }
+    .global-domain {
+  background-color: #f3f0ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.scale-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.scale-container {
+  display: flex;
+  align-items: center;
+}
+
+.scale-bar {
+  width: 80%;
+  height: 10px;
+  background-color: #e5e7eb;
+  position: relative;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.fill-bar {
+  height: 100%;
+  background-color: #6366f1;
+  border-radius: 5px;
+}
+
+.score {
+  font-size: 20px;
+  color: #4b5563;
+}
+
+/* Basic styling for the header */
+.header {
+      display: flex;
+      /*justify-content: space-between;*/
+      align-items: center;
+      background-color: #f3f4f6;
+      padding: 10px 20px;
+    }
+
+    .header img {
+      max-height: 80px; /* Adjust the logo size */
+    }
+
+    .header .left-logo, .header .right-logo {
+      width: 100px;
+    }
+
+  </style>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+  
+</head>
+<body>
+  <header class="header" style="margin-bottom: 50px;">
+    <!-- Optional heading/title -->
+    <h1 style="margin-right: 320px;">16 Personality Factor Questionnaire</h1>
+    <!-- Right logo -->
+    <!-- Left logo -->
+    <div class="left-logo" style="margin-right: 30px;">
+      <img src="bedayalogo.png" alt="Left Logo">
+    </div>
+    
+    <div class="right-logo">
+      <img src="yaslogo.png" alt="Right Logo">
+    </div>
+  </header>
+  <div class="container">
+    <!--<h1>16 Personality Factor Questionnaire</h1>-->
+    <form id="personalityForm">
+      <!-- Question 1 -->
+      <div class="question-block">
+        <label for="q1">I am hard to get to know</label><br>
+        <input type="radio" name="q1" value="1"> Strongly Disagree
+        <input type="radio" name="q1" value="2"> Disagree
+        <input type="radio" name="q1" value="3"> Neutral
+        <input type="radio" name="q1" value="4"> Agree
+        <input type="radio" name="q1" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question-block">
+        <label for="q2">I enjoy my privacy</label><br>
+        <input type="radio" name="q2" value="1"> Strongly Disagree
+        <input type="radio" name="q2" value="2"> Disagree
+        <input type="radio" name="q2" value="3"> Neutral
+        <input type="radio" name="q2" value="4"> Agree
+        <input type="radio" name="q2" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question-block">
+        <label for="q3">I enjoy being part of a loud crowd</label><br>
+        <input type="radio" name="q3" value="1"> Strongly Disagree
+        <input type="radio" name="q3" value="2"> Disagree
+        <input type="radio" name="q3" value="3"> Neutral
+        <input type="radio" name="q3" value="4"> Agree
+        <input type="radio" name="q3" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question-block">
+        <label for="q4">I get chores done right away</label><br>
+        <input type="radio" name="q4" value="1"> Strongly Disagree
+        <input type="radio" name="q4" value="2"> Disagree
+        <input type="radio" name="q4" value="3"> Neutral
+        <input type="radio" name="q4" value="4"> Agree
+        <input type="radio" name="q4" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question-block">
+        <label for="q5">I'm not an adventurous person</label><br>
+        <input type="radio" name="q5" value="1"> Strongly Disagree
+        <input type="radio" name="q5" value="2"> Disagree
+        <input type="radio" name="q5" value="3"> Neutral
+        <input type="radio" name="q5" value="4"> Agree
+        <input type="radio" name="q5" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 6 -->
+      <div class="question-block">
+        <label for="q6">I rarely notice my emotional reactions</label><br>
+        <input type="radio" name="q6" value="1"> Strongly Disagree
+        <input type="radio" name="q6" value="2"> Disagree
+        <input type="radio" name="q6" value="3"> Neutral
+        <input type="radio" name="q6" value="4"> Agree
+        <input type="radio" name="q6" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 7 -->
+      <div class="question-block">
+        <label for="q7">I distrust people</label><br>
+        <input type="radio" name="q7" value="1"> Strongly Disagree
+        <input type="radio" name="q7" value="2"> Disagree
+        <input type="radio" name="q7" value="3"> Neutral
+        <input type="radio" name="q7" value="4"> Agree
+        <input type="radio" name="q7" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 8 -->
+      <div class="question-block">
+        <label for="q8">I pay my bills on time</label><br>
+        <input type="radio" name="q8" value="1"> Strongly Disagree
+        <input type="radio" name="q8" value="2"> Disagree
+        <input type="radio" name="q8" value="3"> Neutral
+        <input type="radio" name="q8" value="4"> Agree
+        <input type="radio" name="q8" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 9 -->
+      <div class="question-block">
+        <label for="q9">I enjoy hearing new ideas</label><br>
+        <input type="radio" name="q9" value="1"> Strongly Disagree
+        <input type="radio" name="q9" value="2"> Disagree
+        <input type="radio" name="q9" value="3"> Neutral
+        <input type="radio" name="q9" value="4"> Agree
+        <input type="radio" name="q9" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 10 -->
+      <div class="question-block">
+        <label for="q10">I'm an overthinker</label><br>
+        <input type="radio" name="q10" value="1"> Strongly Disagree
+        <input type="radio" name="q10" value="2"> Disagree
+        <input type="radio" name="q10" value="3"> Neutral
+        <input type="radio" name="q10" value="4"> Agree
+        <input type="radio" name="q10" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 11 -->
+      <div class="question-block">
+        <label for="q11">I avoid confrontation</label><br>
+        <input type="radio" name="q11" value="1"> Strongly Disagree
+        <input type="radio" name="q11" value="2"> Disagree
+        <input type="radio" name="q11" value="3"> Neutral
+        <input type="radio" name="q11" value="4"> Agree
+        <input type="radio" name="q11" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 12 -->
+      <div class="question-block">
+        <label for="q12">I rarely get lost in thought</label><br>
+        <input type="radio" name="q12" value="1"> Strongly Disagree
+        <input type="radio" name="q12" value="2"> Disagree
+        <input type="radio" name="q12" value="3"> Neutral
+        <input type="radio" name="q12" value="4"> Agree
+        <input type="radio" name="q12" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 13 -->
+      <div class="question-block">
+        <label for="q13">I find complex discussions to be uninteresting</label><br>
+        <input type="radio" name="q13" value="1"> Strongly Disagree
+        <input type="radio" name="q13" value="2"> Disagree
+        <input type="radio" name="q13" value="3"> Neutral
+        <input type="radio" name="q13" value="4"> Agree
+        <input type="radio" name="q13" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 14 -->
+      <div class="question-block">
+        <label for="q14">I find it hard to forgive others</label><br>
+        <input type="radio" name="q14" value="1"> Strongly Disagree
+        <input type="radio" name="q14" value="2"> Disagree
+        <input type="radio" name="q14" value="3"> Neutral
+        <input type="radio" name="q14" value="4"> Agree
+        <input type="radio" name="q14" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 15 -->
+      <div class="question-block">
+        <label for="q15">I leave a mess in my room</label><br>
+        <input type="radio" name="q15" value="1"> Strongly Disagree
+        <input type="radio" name="q15" value="2"> Disagree
+        <input type="radio" name="q15" value="3"> Neutral
+        <input type="radio" name="q15" value="4"> Agree
+        <input type="radio" name="q15" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 16 -->
+      <div class="question-block">
+        <label for="q16">I learn quickly</label><br>
+        <input type="radio" name="q16" value="1"> Strongly Disagree
+        <input type="radio" name="q16" value="2"> Disagree
+        <input type="radio" name="q16" value="3"> Neutral
+        <input type="radio" name="q16" value="4"> Agree
+        <input type="radio" name="q16" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 17 -->
+      <div class="question-block">
+        <label for="q17">I am the last to laugh at a joke</label><br>
+        <input type="radio" name="q17" value="1"> Strongly Disagree
+        <input type="radio" name="q17" value="2"> Disagree
+        <input type="radio" name="q17" value="3"> Neutral
+        <input type="radio" name="q17" value="4"> Agree
+        <input type="radio" name="q17" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 18 -->
+      <div class="question-block">
+        <label for="q18">I feel guilty when I say no</label><br>
+        <input type="radio" name="q18" value="1"> Strongly Disagree
+        <input type="radio" name="q18" value="2"> Disagree
+        <input type="radio" name="q18" value="3"> Neutral
+        <input type="radio" name="q18" value="4"> Agree
+        <input type="radio" name="q18" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 19 -->
+      <div class="question-block">
+        <label for="q19">Change is not appealing to me</label><br>
+        <input type="radio" name="q19" value="1"> Strongly Disagree
+        <input type="radio" name="q19" value="2"> Disagree
+        <input type="radio" name="q19" value="3"> Neutral
+        <input type="radio" name="q19" value="4"> Agree
+        <input type="radio" name="q19" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 20 -->
+      <div class="question-block">
+        <label for="q20">I believe that others have good intentions</label><br>
+        <input type="radio" name="q20" value="1"> Strongly Disagree
+        <input type="radio" name="q20" value="2"> Disagree
+        <input type="radio" name="q20" value="3"> Neutral
+        <input type="radio" name="q20" value="4"> Agree
+        <input type="radio" name="q20" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 21 -->
+      <div class="question-block">
+        <label for="q21">I speak up when necessary</label><br>
+        <input type="radio" name="q21" value="1"> Strongly Disagree
+        <input type="radio" name="q21" value="2"> Disagree
+        <input type="radio" name="q21" value="3"> Neutral
+        <input type="radio" name="q21" value="4"> Agree
+        <input type="radio" name="q21" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 22 -->
+      <div class="question-block">
+        <label for="q22">I get stressed out easily</label><br>
+        <input type="radio" name="q22" value="1"> Strongly Disagree
+        <input type="radio" name="q22" value="2"> Disagree
+        <input type="radio" name="q22" value="3"> Neutral
+        <input type="radio" name="q22" value="4"> Agree
+        <input type="radio" name="q22" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 23 -->
+      <div class="question-block">
+        <label for="q23">I joke around a lot</label><br>
+        <input type="radio" name="q23" value="1"> Strongly Disagree
+        <input type="radio" name="q23" value="2"> Disagree
+        <input type="radio" name="q23" value="3"> Neutral
+        <input type="radio" name="q23" value="4"> Agree
+        <input type="radio" name="q23" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 24 -->
+      <div class="question-block">
+        <label for="q24">I am not interested in theoretical discussions</label><br>
+        <input type="radio" name="q24" value="1"> Strongly Disagree
+        <input type="radio" name="q24" value="2"> Disagree
+        <input type="radio" name="q24" value="3"> Neutral
+        <input type="radio" name="q24" value="4"> Agree
+        <input type="radio" name="q24" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 25 -->
+      <div class="question-block">
+        <label for="q25">I don't share a lot about myself</label><br>
+        <input type="radio" name="q25" value="1"> Strongly Disagree
+        <input type="radio" name="q25" value="2"> Disagree
+        <input type="radio" name="q25" value="3"> Neutral
+        <input type="radio" name="q25" value="4"> Agree
+        <input type="radio" name="q25" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 26 -->
+      <div class="question-block">
+        <label for="q26">I take time out for others</label><br>
+        <input type="radio" name="q26" value="1"> Strongly Disagree
+        <input type="radio" name="q26" value="2"> Disagree
+        <input type="radio" name="q26" value="3"> Neutral
+        <input type="radio" name="q26" value="4"> Agree
+        <input type="radio" name="q26" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 27 -->
+      <div class="question-block">
+        <label for="q27">I prefer variety to routine</label><br>
+        <input type="radio" name="q27" value="1"> Strongly Disagree
+        <input type="radio" name="q27" value="2"> Disagree
+        <input type="radio" name="q27" value="3"> Neutral
+        <input type="radio" name="q27" value="4"> Agree
+        <input type="radio" name="q27" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 28 -->
+      <div class="question-block">
+        <label for="q28">I trust others</label><br>
+        <input type="radio" name="q28" value="1"> Strongly Disagree
+        <input type="radio" name="q28" value="2"> Disagree
+        <input type="radio" name="q28" value="3"> Neutral
+        <input type="radio" name="q28" value="4"> Agree
+        <input type="radio" name="q28" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 29 -->
+      <div class="question-block">
+        <label for="q29">I am not easily bothered by things</label><br>
+        <input type="radio" name="q29" value="1"> Strongly Disagree
+        <input type="radio" name="q29" value="2"> Disagree
+        <input type="radio" name="q29" value="3"> Neutral
+        <input type="radio" name="q29" value="4"> Agree
+        <input type="radio" name="q29" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 30 -->
+      <div class="question-block">
+        <label for="q30">I'm an overthinker</label><br>
+        <input type="radio" name="q30" value="1"> Strongly Disagree
+        <input type="radio" name="q30" value="2"> Disagree
+        <input type="radio" name="q30" value="3"> Neutral
+        <input type="radio" name="q30" value="4"> Agree
+        <input type="radio" name="q30" value="5"> Strongly Agree
+      </div>
+
+      <!-- Question 31 -->
+<div class="question-block">
+  <label for="q31">I have a limited imagination</label><br>
+  <input type="radio" name="q31" value="1"> Strongly Disagree
+  <input type="radio" name="q31" value="2"> Disagree
+  <input type="radio" name="q31" value="3"> Neutral
+  <input type="radio" name="q31" value="4"> Agree
+  <input type="radio" name="q31" value="5"> Strongly Agree
+</div>
+
+<!-- Question 32 -->
+<div class="question-block">
+  <label for="q32">I reveal little about myself</label><br>
+  <input type="radio" name="q32" value="1"> Strongly Disagree
+  <input type="radio" name="q32" value="2"> Disagree
+  <input type="radio" name="q32" value="3"> Neutral
+  <input type="radio" name="q32" value="4"> Agree
+  <input type="radio" name="q32" value="5"> Strongly Agree
+</div>
+
+<!-- Question 33 -->
+<div class="question-block">
+  <label for="q33">I am not afraid of voicing my opinion even if it meets opposition</label><br>
+  <input type="radio" name="q33" value="1"> Strongly Disagree
+  <input type="radio" name="q33" value="2"> Disagree
+  <input type="radio" name="q33" value="3"> Neutral
+  <input type="radio" name="q33" value="4"> Agree
+  <input type="radio" name="q33" value="5"> Strongly Agree
+</div>
+
+<!-- Question 34 -->
+<div class="question-block">
+  <label for="q34">I prefer consulting others when making decisions</label><br>
+  <input type="radio" name="q34" value="1"> Strongly Disagree
+  <input type="radio" name="q34" value="2"> Disagree
+  <input type="radio" name="q34" value="3"> Neutral
+  <input type="radio" name="q34" value="4"> Agree
+  <input type="radio" name="q34" value="5"> Strongly Agree
+</div>
+
+<!-- Question 35 -->
+<div class="question-block">
+  <label for="q35">I'm indifferent about people's opinion of me</label><br>
+  <input type="radio" name="q35" value="1"> Strongly Disagree
+  <input type="radio" name="q35" value="2"> Disagree
+  <input type="radio" name="q35" value="3"> Neutral
+  <input type="radio" name="q35" value="4"> Agree
+  <input type="radio" name="q35" value="5"> Strongly Agree
+</div>
+
+<!-- Question 36 -->
+<div class="question-block">
+  <label for="q36">I put off unpleasant tasks</label><br>
+  <input type="radio" name="q36" value="1"> Strongly Disagree
+  <input type="radio" name="q36" value="2"> Disagree
+  <input type="radio" name="q36" value="3"> Neutral
+  <input type="radio" name="q36" value="4"> Agree
+  <input type="radio" name="q36" value="5"> Strongly Agree
+</div>
+
+<!-- Question 37 -->
+<div class="question-block">
+  <label for="q37">I react calmly to stressful situations</label><br>
+  <input type="radio" name="q37" value="1"> Strongly Disagree
+  <input type="radio" name="q37" value="2"> Disagree
+  <input type="radio" name="q37" value="3"> Neutral
+  <input type="radio" name="q37" value="4"> Agree
+  <input type="radio" name="q37" value="5"> Strongly Agree
+</div>
+
+<!-- Question 38 -->
+<div class="question-block">
+  <label for="q38">I anticipate the needs of others</label><br>
+  <input type="radio" name="q38" value="1"> Strongly Disagree
+  <input type="radio" name="q38" value="2"> Disagree
+  <input type="radio" name="q38" value="3"> Neutral
+  <input type="radio" name="q38" value="4"> Agree
+  <input type="radio" name="q38" value="5"> Strongly Agree
+</div>
+
+<!-- Question 39 -->
+<div class="question-block">
+  <label for="q39">I believe that people seldom tell you the whole truth</label><br>
+  <input type="radio" name="q39" value="1"> Strongly Disagree
+  <input type="radio" name="q39" value="2"> Disagree
+  <input type="radio" name="q39" value="3"> Neutral
+  <input type="radio" name="q39" value="4"> Agree
+  <input type="radio" name="q39" value="5"> Strongly Agree
+</div>
+
+<!-- Question 40 -->
+<div class="question-block">
+  <label for="q40">I worry about things</label><br>
+  <input type="radio" name="q40" value="1"> Strongly Disagree
+  <input type="radio" name="q40" value="2"> Disagree
+  <input type="radio" name="q40" value="3"> Neutral
+  <input type="radio" name="q40" value="4"> Agree
+  <input type="radio" name="q40" value="5"> Strongly Agree
+</div>
+
+<!-- Question 41 -->
+<div class="question-block">
+  <label for="q41">I take on challenges which are new and ambiguous, confidently</label><br>
+  <input type="radio" name="q41" value="1"> Strongly Disagree
+  <input type="radio" name="q41" value="2"> Disagree
+  <input type="radio" name="q41" value="3"> Neutral
+  <input type="radio" name="q41" value="4"> Agree
+  <input type="radio" name="q41" value="5"> Strongly Agree
+</div>
+
+<!-- Question 42 -->
+<div class="question-block">
+  <label for="q42">I am not interested in theoretical discussions</label><br>
+  <input type="radio" name="q42" value="1"> Strongly Disagree
+  <input type="radio" name="q42" value="2"> Disagree
+  <input type="radio" name="q42" value="3"> Neutral
+  <input type="radio" name="q42" value="4"> Agree
+  <input type="radio" name="q42" value="5"> Strongly Agree
+</div>
+
+<!-- Question 43 -->
+<div class="question-block">
+  <label for="q43">I am a shy person</label><br>
+  <input type="radio" name="q43" value="1"> Strongly Disagree
+  <input type="radio" name="q43" value="2"> Disagree
+  <input type="radio" name="q43" value="3"> Neutral
+  <input type="radio" name="q43" value="4"> Agree
+  <input type="radio" name="q43" value="5"> Strongly Agree
+</div>
+
+<!-- Question 44 -->
+<div class="question-block">
+  <label for="q44">I let others make the decisions</label><br>
+  <input type="radio" name="q44" value="1"> Strongly Disagree
+  <input type="radio" name="q44" value="2"> Disagree
+  <input type="radio" name="q44" value="3"> Neutral
+  <input type="radio" name="q44" value="4"> Agree
+  <input type="radio" name="q44" value="5"> Strongly Agree
+</div>
+
+<!-- Question 45 -->
+<div class="question-block">
+  <label for="q45">I know how to get around rules</label><br>
+  <input type="radio" name="q45" value="1"> Strongly Disagree
+  <input type="radio" name="q45" value="2"> Disagree
+  <input type="radio" name="q45" value="3"> Neutral
+  <input type="radio" name="q45" value="4"> Agree
+  <input type="radio" name="q45" value="5"> Strongly Agree
+</div>
+
+<!-- Question 46 -->
+<div class="question-block">
+  <label for="q46">I often experience feelings of guilt</label><br>
+  <input type="radio" name="q46" value="1"> Strongly Disagree
+  <input type="radio" name="q46" value="2"> Disagree
+  <input type="radio" name="q46" value="3"> Neutral
+  <input type="radio" name="q46" value="4"> Agree
+  <input type="radio" name="q46" value="5"> Strongly Agree
+</div>
+
+<!-- Question 47 -->
+<div class="question-block">
+  <label for="q47">I avoid taking risks</label><br>
+  <input type="radio" name="q47" value="1"> Strongly Disagree
+  <input type="radio" name="q47" value="2"> Disagree
+  <input type="radio" name="q47" value="3"> Neutral
+  <input type="radio" name="q47" value="4"> Agree
+  <input type="radio" name="q47" value="5"> Strongly Agree
+</div>
+
+<!-- Question 48 -->
+<div class="question-block">
+  <label for="q48">I do things by the book</label><br>
+  <input type="radio" name="q48" value="1"> Strongly Disagree
+  <input type="radio" name="q48" value="2"> Disagree
+  <input type="radio" name="q48" value="3"> Neutral
+  <input type="radio" name="q48" value="4"> Agree
+  <input type="radio" name="q48" value="5"> Strongly Agree
+</div>
+
+<!-- Question 49 -->
+<div class="question-block">
+  <label for="q49">I like working on tasks that I am familiar with</label><br>
+  <input type="radio" name="q49" value="1"> Strongly Disagree
+  <input type="radio" name="q49" value="2"> Disagree
+  <input type="radio" name="q49" value="3"> Neutral
+  <input type="radio" name="q49" value="4"> Agree
+  <input type="radio" name="q49" value="5"> Strongly Agree
+</div>
+
+<!-- Question 50 -->
+<div class="question-block">
+  <label for="q50">I am considered to be a laidback person</label><br>
+  <input type="radio" name="q50" value="1"> Strongly Disagree
+  <input type="radio" name="q50" value="2"> Disagree
+  <input type="radio" name="q50" value="3"> Neutral
+  <input type="radio" name="q50" value="4"> Agree
+  <input type="radio" name="q50" value="5"> Strongly Agree
+</div>
+
+<!-- Question 51 -->
+<div class="question-block">
+  <label for="q51">I feel others' emotions</label><br>
+  <input type="radio" name="q51" value="1"> Strongly Disagree
+  <input type="radio" name="q51" value="2"> Disagree
+  <input type="radio" name="q51" value="3"> Neutral
+  <input type="radio" name="q51" value="4"> Agree
+  <input type="radio" name="q51" value="5"> Strongly Agree
+</div>
+
+<!-- Question 52 -->
+<div class="question-block">
+  <label for="q52">I enjoy silence</label><br>
+  <input type="radio" name="q52" value="1"> Strongly Disagree
+  <input type="radio" name="q52" value="2"> Disagree
+  <input type="radio" name="q52" value="3"> Neutral
+  <input type="radio" name="q52" value="4"> Agree
+  <input type="radio" name="q52" value="5"> Strongly Agree
+</div>
+
+<!-- Question 53 -->
+<div class="question-block">
+  <label for="q53">I spend time thinking about past mistakes</label><br>
+  <input type="radio" name="q53" value="1"> Strongly Disagree
+  <input type="radio" name="q53" value="2"> Disagree
+  <input type="radio" name="q53" value="3"> Neutral
+  <input type="radio" name="q53" value="4"> Agree
+  <input type="radio" name="q53" value="5"> Strongly Agree
+</div>
+
+<!-- Question 54 -->
+<div class="question-block">
+  <label for="q54">I don't mind eating alone</label><br>
+  <input type="radio" name="q54" value="1"> Strongly Disagree
+  <input type="radio" name="q54" value="2"> Disagree
+  <input type="radio" name="q54" value="3"> Neutral
+  <input type="radio" name="q54" value="4"> Agree
+  <input type="radio" name="q54" value="5"> Strongly Agree
+</div>
+
+<!-- Question 55 -->
+<div class="question-block">
+  <label for="q55">I control my temper</label><br>
+  <input type="radio" name="q55" value="1"> Strongly Disagree
+  <input type="radio" name="q55" value="2"> Disagree
+  <input type="radio" name="q55" value="3"> Neutral
+  <input type="radio" name="q55" value="4"> Agree
+  <input type="radio" name="q55" value="5"> Strongly Agree
+</div>
+
+<!-- Question 56 -->
+<div class="question-block">
+  <label for="q56">I swim against the current</label><br>
+  <input type="radio" name="q56" value="1"> Strongly Disagree
+  <input type="radio" name="q56" value="2"> Disagree
+  <input type="radio" name="q56" value="3"> Neutral
+  <input type="radio" name="q56" value="4"> Agree
+  <input type="radio" name="q56" value="5"> Strongly Agree
+</div>
+
+<!-- Question 57 -->
+<div class="question-block">
+  <label for="q57">I don't let others discourage me</label><br>
+  <input type="radio" name="q57" value="1"> Strongly Disagree
+  <input type="radio" name="q57" value="2"> Disagree
+  <input type="radio" name="q57" value="3"> Neutral
+  <input type="radio" name="q57" value="4"> Agree
+  <input type="radio" name="q57" value="5"> Strongly Agree
+</div>
+
+<!-- Question 58 -->
+<div class="question-block">
+  <label for="q58">I like to get lost in thought</label><br>
+  <input type="radio" name="q58" value="1"> Strongly Disagree
+  <input type="radio" name="q58" value="2"> Disagree
+  <input type="radio" name="q58" value="3"> Neutral
+  <input type="radio" name="q58" value="4"> Agree
+  <input type="radio" name="q58" value="5"> Strongly Agree
+</div>
+
+<!-- Question 59 -->
+<div class="question-block">
+  <label for="q59">I find it difficult to form new friendships</label><br>
+  <input type="radio" name="q59" value="1"> Strongly Disagree
+  <input type="radio" name="q59" value="2"> Disagree
+  <input type="radio" name="q59" value="3"> Neutral
+  <input type="radio" name="q59" value="4"> Agree
+  <input type="radio" name="q59" value="5"> Strongly Agree
+</div>
+
+<!-- Question 60 -->
+<div class="question-block">
+  <label for="q60">I am relaxed most of the time</label><br>
+  <input type="radio" name="q60" value="1"> Strongly Disagree
+  <input type="radio" name="q60" value="2"> Disagree
+  <input type="radio" name="q60" value="3"> Neutral
+  <input type="radio" name="q60" value="4"> Agree
+  <input type="radio" name="q60" value="5"> Strongly Agree
+</div>
+
+<!-- Question 61 -->
+<div class="question-block">
+  <label for="q61">I have positive relationships with everyone</label><br>
+  <input type="radio" name="q61" value="1"> Strongly Disagree
+  <input type="radio" name="q61" value="2"> Disagree
+  <input type="radio" name="q61" value="3"> Neutral
+  <input type="radio" name="q61" value="4"> Agree
+  <input type="radio" name="q61" value="5"> Strongly Agree
+</div>
+
+<!-- Question 62 -->
+<div class="question-block">
+  <label for="q62">I am not bothered by disorder</label><br>
+  <input type="radio" name="q62" value="1"> Strongly Disagree
+  <input type="radio" name="q62" value="2"> Disagree
+  <input type="radio" name="q62" value="3"> Neutral
+  <input type="radio" name="q62" value="4"> Agree
+  <input type="radio" name="q62" value="5"> Strongly Agree
+</div>
+
+<!-- Question 63 -->
+<div class="question-block">
+  <label for="q63">I get irritated easily</label><br>
+  <input type="radio" name="q63" value="1"> Strongly Disagree
+  <input type="radio" name="q63" value="2"> Disagree
+  <input type="radio" name="q63" value="3"> Neutral
+  <input type="radio" name="q63" value="4"> Agree
+  <input type="radio" name="q63" value="5"> Strongly Agree
+</div>
+
+<!-- Question 64 -->
+<div class="question-block">
+  <label for="q64">I like order</label><br>
+  <input type="radio" name="q64" value="1"> Strongly Disagree
+  <input type="radio" name="q64" value="2"> Disagree
+  <input type="radio" name="q64" value="3"> Neutral
+  <input type="radio" name="q64" value="4"> Agree
+  <input type="radio" name="q64" value="5"> Strongly Agree
+</div>
+
+<!-- Question 65 -->
+<div class="question-block">
+  <label for="q65">I strive to make things perfect</label><br>
+  <input type="radio" name="q65" value="1"> Strongly Disagree
+  <input type="radio" name="q65" value="2"> Disagree
+  <input type="radio" name="q65" value="3"> Neutral
+  <input type="radio" name="q65" value="4"> Agree
+  <input type="radio" name="q65" value="5"> Strongly Agree
+</div>
+
+<!-- Question 66 -->
+<div class="question-block">
+  <label for="q66">I cherish my alone time</label><br>
+  <input type="radio" name="q66" value="1"> Strongly Disagree
+  <input type="radio" name="q66" value="2"> Disagree
+  <input type="radio" name="q66" value="3"> Neutral
+  <input type="radio" name="q66" value="4"> Agree
+  <input type="radio" name="q66" value="5"> Strongly Agree
+</div>
+
+<!-- Question 67 -->
+<div class="question-block">
+  <label for="q67">I don't like to get involved in other people's problems</label><br>
+  <input type="radio" name="q67" value="1"> Strongly Disagree
+  <input type="radio" name="q67" value="2"> Disagree
+  <input type="radio" name="q67" value="3"> Neutral
+  <input type="radio" name="q67" value="4"> Agree
+  <input type="radio" name="q67" value="5"> Strongly Agree
+</div>
+
+<!-- Question 68 -->
+<div class="question-block">
+  <label for="q68">I take control of things</label><br>
+  <input type="radio" name="q68" value="1"> Strongly Disagree
+  <input type="radio" name="q68" value="2"> Disagree
+  <input type="radio" name="q68" value="3"> Neutral
+  <input type="radio" name="q68" value="4"> Agree
+  <input type="radio" name="q68" value="5"> Strongly Agree
+</div>
+
+<!-- Question 69 -->
+<div class="question-block">
+  <label for="q69">I challenge authority</label><br>
+  <input type="radio" name="q69" value="1"> Strongly Disagree
+  <input type="radio" name="q69" value="2"> Disagree
+  <input type="radio" name="q69" value="3"> Neutral
+  <input type="radio" name="q69" value="4"> Agree
+  <input type="radio" name="q69" value="5"> Strongly Agree
+</div>
+
+<!-- Question 70 -->
+<div class="question-block">
+  <label for="q70">I dislike loud music</label><br>
+  <input type="radio" name="q70" value="1"> Strongly Disagree
+  <input type="radio" name="q70" value="2"> Disagree
+  <input type="radio" name="q70" value="3"> Neutral
+  <input type="radio" name="q70" value="4"> Agree
+  <input type="radio" name="q70" value="5"> Strongly Agree
+</div>
+
+<!-- Question 71 -->
+<div class="question-block">
+  <label for="q71">I believe there is always an exception to rules</label><br>
+  <input type="radio" name="q71" value="1"> Strongly Disagree
+  <input type="radio" name="q71" value="2"> Disagree
+  <input type="radio" name="q71" value="3"> Neutral
+  <input type="radio" name="q71" value="4"> Agree
+  <input type="radio" name="q71" value="5"> Strongly Agree
+</div>
+
+<!-- Question 72 -->
+<div class="question-block">
+  <label for="q72">I take an interest in other people's lives</label><br>
+  <input type="radio" name="q72" value="1"> Strongly Disagree
+  <input type="radio" name="q72" value="2"> Disagree
+  <input type="radio" name="q72" value="3"> Neutral
+  <input type="radio" name="q72" value="4"> Agree
+  <input type="radio" name="q72" value="5"> Strongly Agree
+</div>
+
+<!-- Question 73 -->
+<div class="question-block">
+  <label for="q73">I don't like crowded events</label><br>
+  <input type="radio" name="q73" value="1"> Strongly Disagree
+  <input type="radio" name="q73" value="2"> Disagree
+  <input type="radio" name="q73" value="3"> Neutral
+  <input type="radio" name="q73" value="4"> Agree
+  <input type="radio" name="q73" value="5"> Strongly Agree
+</div>
+
+<!-- Question 74 -->
+<div class="question-block">
+  <label for="q74">I suspect hidden motives in others</label><br>
+  <input type="radio" name="q74" value="1"> Strongly Disagree
+  <input type="radio" name="q74" value="2"> Disagree
+  <input type="radio" name="q74" value="3"> Neutral
+  <input type="radio" name="q74" value="4"> Agree
+  <input type="radio" name="q74" value="5"> Strongly Agree
+</div>
+
+<!-- Question 75 -->
+<div class="question-block">
+  <label for="q75">I am open about myself to others</label><br>
+  <input type="radio" name="q75" value="1"> Strongly Disagree
+  <input type="radio" name="q75" value="2"> Disagree
+  <input type="radio" name="q75" value="3"> Neutral
+  <input type="radio" name="q75" value="4"> Agree
+  <input type="radio" name="q75" value="5"> Strongly Agree
+</div>
+
+<!-- Question 76 -->
+<div class="question-block">
+  <label for="q76">I don't like to be contradicted</label><br>
+  <input type="radio" name="q76" value="1"> Strongly Disagree
+  <input type="radio" name="q76" value="2"> Disagree
+  <input type="radio" name="q76" value="3"> Neutral
+  <input type="radio" name="q76" value="4"> Agree
+  <input type="radio" name="q76" value="5"> Strongly Agree
+</div>
+
+<!-- Question 77 -->
+<div class="question-block">
+  <label for="q77">I am easily discouraged</label><br>
+  <input type="radio" name="q77" value="1"> Strongly Disagree
+  <input type="radio" name="q77" value="2"> Disagree
+  <input type="radio" name="q77" value="3"> Neutral
+  <input type="radio" name="q77" value="4"> Agree
+  <input type="radio" name="q77" value="5"> Strongly Agree
+</div>
+
+<!-- Question 78 -->
+<div class="question-block">
+  <label for="q78">I am the life of the party</label><br>
+  <input type="radio" name="q78" value="1"> Strongly Disagree
+  <input type="radio" name="q78" value="2"> Disagree
+  <input type="radio" name="q78" value="3"> Neutral
+  <input type="radio" name="q78" value="4"> Agree
+  <input type="radio" name="q78" value="5"> Strongly Agree
+</div>
+
+<!-- Question 79 -->
+<div class="question-block">
+  <label for="q79">I say what I think</label><br>
+  <input type="radio" name="q79" value="1"> Strongly Disagree
+  <input type="radio" name="q79" value="2"> Disagree
+  <input type="radio" name="q79" value="3"> Neutral
+  <input type="radio" name="q79" value="4"> Agree
+  <input type="radio" name="q79" value="5"> Strongly Agree
+</div>
+
+<!-- Question 80 -->
+<div class="question-block">
+  <label for="q80">I'm nervous about public speaking</label><br>
+  <input type="radio" name="q80" value="1"> Strongly Disagree
+  <input type="radio" name="q80" value="2"> Disagree
+  <input type="radio" name="q80" value="3"> Neutral
+  <input type="radio" name="q80" value="4"> Agree
+  <input type="radio" name="q80" value="5"> Strongly Agree
+</div>
+
+<!-- Question 81 -->
+<div class="question-block">
+  <label for="q81">I trust what people say</label><br>
+  <input type="radio" name="q81" value="1"> Strongly Disagree
+  <input type="radio" name="q81" value="2"> Disagree
+  <input type="radio" name="q81" value="3"> Neutral
+  <input type="radio" name="q81" value="4"> Agree
+  <input type="radio" name="q81" value="5"> Strongly Agree
+</div>
+
+<!-- Question 82 -->
+<div class="question-block">
+  <label for="q82">I leave my belongings around</label><br>
+  <input type="radio" name="q82" value="1"> Strongly Disagree
+  <input type="radio" name="q82" value="2"> Disagree
+  <input type="radio" name="q82" value="3"> Neutral
+  <input type="radio" name="q82" value="4"> Agree
+  <input type="radio" name="q82" value="5"> Strongly Agree
+</div>
+
+<!-- Question 83 -->
+<div class="question-block">
+  <label for="q83">I counter others' arguments</label><br>
+  <input type="radio" name="q83" value="1"> Strongly Disagree
+  <input type="radio" name="q83" value="2"> Disagree
+  <input type="radio" name="q83" value="3"> Neutral
+  <input type="radio" name="q83" value="4"> Agree
+  <input type="radio" name="q83" value="5"> Strongly Agree
+</div>
+
+<!-- Question 84 -->
+<div class="question-block">
+  <label for="q84">I break rules</label><br>
+  <input type="radio" name="q84" value="1"> Strongly Disagree
+  <input type="radio" name="q84" value="2"> Disagree
+  <input type="radio" name="q84" value="3"> Neutral
+  <input type="radio" name="q84" value="4"> Agree
+  <input type="radio" name="q84" value="5"> Strongly Agree
+</div>
+
+<!-- Question 85 -->
+<div class="question-block">
+  <label for="q85">I want everything to be just right</label><br>
+  <input type="radio" name="q85" value="1"> Strongly Disagree
+  <input type="radio" name="q85" value="2"> Disagree
+  <input type="radio" name="q85" value="3"> Neutral
+  <input type="radio" name="q85" value="4"> Agree
+  <input type="radio" name="q85" value="5"> Strongly Agree
+</div>
+
+<!-- Question 86 -->
+<div class="question-block">
+  <label for="q86">I enjoy teamwork</label><br>
+  <input type="radio" name="q86" value="1"> Strongly Disagree
+  <input type="radio" name="q86" value="2"> Disagree
+  <input type="radio" name="q86" value="3"> Neutral
+  <input type="radio" name="q86" value="4"> Agree
+  <input type="radio" name="q86" value="5"> Strongly Agree
+</div>
+
+<!-- Question 87 -->
+<div class="question-block">
+  <label for="q87">I enjoy working on creative ideas</label><br>
+  <input type="radio" name="q87" value="1"> Strongly Disagree
+  <input type="radio" name="q87" value="2"> Disagree
+  <input type="radio" name="q87" value="3"> Neutral
+  <input type="radio" name="q87" value="4"> Agree
+  <input type="radio" name="q87" value="5"> Strongly Agree
+</div>
+
+<!-- Question 88 -->
+<div class="question-block">
+  <label for="q88">I keep my thoughts to myself</label><br>
+  <input type="radio" name="q88" value="1"> Strongly Disagree
+  <input type="radio" name="q88" value="2"> Disagree
+  <input type="radio" name="q88" value="3"> Neutral
+  <input type="radio" name="q88" value="4"> Agree
+  <input type="radio" name="q88" value="5"> Strongly Agree
+</div>
+
+<!-- Question 89 -->
+<div class="question-block">
+  <label for="q89">I readily overcome setbacks</label><br>
+  <input type="radio" name="q89" value="1"> Strongly Disagree
+  <input type="radio" name="q89" value="2"> Disagree
+  <input type="radio" name="q89" value="3"> Neutral
+  <input type="radio" name="q89" value="4"> Agree
+  <input type="radio" name="q89" value="5"> Strongly Agree
+</div>
+
+<!-- Question 90 -->
+<div class="question-block">
+  <label for="q90">I know how to comfort others</label><br>
+  <input type="radio" name="q90" value="1"> Strongly Disagree
+  <input type="radio" name="q90" value="2"> Disagree
+  <input type="radio" name="q90" value="3"> Neutral
+  <input type="radio" name="q90" value="4"> Agree
+  <input type="radio" name="q90" value="5"> Strongly Agree
+</div>
+
+<!-- Question 91 -->
+<div class="question-block">
+  <label for="q91">I weigh the pros against the cons</label><br>
+  <input type="radio" name="q91" value="1"> Strongly Disagree
+  <input type="radio" name="q91" value="2"> Disagree
+  <input type="radio" name="q91" value="3"> Neutral
+  <input type="radio" name="q91" value="4"> Agree
+  <input type="radio" name="q91" value="5"> Strongly Agree
+</div>
+
+<!-- Question 92 -->
+<div class="question-block">
+  <label for="q92">I rarely daydream</label><br>
+  <input type="radio" name="q92" value="1"> Strongly Disagree
+  <input type="radio" name="q92" value="2"> Disagree
+  <input type="radio" name="q92" value="3"> Neutral
+  <input type="radio" name="q92" value="4"> Agree
+  <input type="radio" name="q92" value="5"> Strongly Agree
+</div>
+
+<!-- Question 93 -->
+<div class="question-block">
+  <label for="q93">I am wary of others</label><br>
+  <input type="radio" name="q93" value="1"> Strongly Disagree
+  <input type="radio" name="q93" value="2"> Disagree
+  <input type="radio" name="q93" value="3"> Neutral
+  <input type="radio" name="q93" value="4"> Agree
+  <input type="radio" name="q93" value="5"> Strongly Agree
+</div>
+
+<!-- Question 94 -->
+<div class="question-block">
+  <label for="q94">I try to forgive and forget</label><br>
+  <input type="radio" name="q94" value="1"> Strongly Disagree
+  <input type="radio" name="q94" value="2"> Disagree
+  <input type="radio" name="q94" value="3"> Neutral
+  <input type="radio" name="q94" value="4"> Agree
+  <input type="radio" name="q94" value="5"> Strongly Agree
+</div>
+
+<!-- Question 95 -->
+<div class="question-block">
+  <label for="q95">I rarely come up with original ideas</label><br>
+  <input type="radio" name="q95" value="1"> Strongly Disagree
+  <input type="radio" name="q95" value="2"> Disagree
+  <input type="radio" name="q95" value="3"> Neutral
+  <input type="radio" name="q95" value="4"> Agree
+  <input type="radio" name="q95" value="5"> Strongly Agree
+</div>
+
+<!-- Question 96 -->
+<div class="question-block">
+  <label for="q96">I bottle up my feelings</label><br>
+  <input type="radio" name="q96" value="1"> Strongly Disagree
+  <input type="radio" name="q96" value="2"> Disagree
+  <input type="radio" name="q96" value="3"> Neutral
+  <input type="radio" name="q96" value="4"> Agree
+  <input type="radio" name="q96" value="5"> Strongly Agree
+</div>
+
+<!-- Question 97 -->
+<div class="question-block">
+  <label for="q97">I am passionate about acquiring new knowledge</label><br>
+  <input type="radio" name="q97" value="1"> Strongly Disagree
+  <input type="radio" name="q97" value="2"> Disagree
+  <input type="radio" name="q97" value="3"> Neutral
+  <input type="radio" name="q97" value="4"> Agree
+  <input type="radio" name="q97" value="5"> Strongly Agree
+</div>
+
+<!-- Question 98 -->
+<div class="question-block">
+  <label for="q98">I believe laws should be strictly enforced</label><br>
+  <input type="radio" name="q98" value="1"> Strongly Disagree
+  <input type="radio" name="q98" value="2"> Disagree
+  <input type="radio" name="q98" value="3"> Neutral
+  <input type="radio" name="q98" value="4"> Agree
+  <input type="radio" name="q98" value="5"> Strongly Agree
+</div>
+
+<!-- Question 99 -->
+<div class="question-block">
+  <label for="q99">I disclose my private thoughts</label><br>
+  <input type="radio" name="q99" value="1"> Strongly Disagree
+  <input type="radio" name="q99" value="2"> Disagree
+  <input type="radio" name="q99" value="3"> Neutral
+  <input type="radio" name="q99" value="4"> Agree
+  <input type="radio" name="q99" value="5"> Strongly Agree
+</div>
+
+<!-- Question 100 -->
+<div class="question-block">
+  <label for="q100">I have frequent mood swings</label><br>
+  <input type="radio" name="q100" value="1"> Strongly Disagree
+  <input type="radio" name="q100" value="2"> Disagree
+  <input type="radio" name="q100" value="3"> Neutral
+  <input type="radio" name="q100" value="4"> Agree
+  <input type="radio" name="q100" value="5"> Strongly Agree
+</div>
+
+<!-- Question 101 -->
+<div class="question-block">
+  <label for="q101">I tend to be oriented towards tasks more than people</label><br>
+  <input type="radio" name="q101" value="1"> Strongly Disagree
+  <input type="radio" name="q101" value="2"> Disagree
+  <input type="radio" name="q101" value="3"> Neutral
+  <input type="radio" name="q101" value="4"> Agree
+  <input type="radio" name="q101" value="5"> Strongly Agree
+</div>
+
+<!-- Question 102 -->
+<div class="question-block">
+  <label for="q102">I seek adventures</label><br>
+  <input type="radio" name="q102" value="1"> Strongly Disagree
+  <input type="radio" name="q102" value="2"> Disagree
+  <input type="radio" name="q102" value="3"> Neutral
+  <input type="radio" name="q102" value="4"> Agree
+  <input type="radio" name="q102" value="5"> Strongly Agree
+</div>
+
+<!-- Question 103 -->
+<div class="question-block">
+  <label for="q103">I am annoyed by others' mistakes</label><br>
+  <input type="radio" name="q103" value="1"> Strongly Disagree
+  <input type="radio" name="q103" value="2"> Disagree
+  <input type="radio" name="q103" value="3"> Neutral
+  <input type="radio" name="q103" value="4"> Agree
+  <input type="radio" name="q103" value="5"> Strongly Agree
+</div>
+
+<!-- Question 104 -->
+<div class="question-block">
+  <label for="q104">I lack control over my destiny</label><br>
+  <input type="radio" name="q104" value="1"> Strongly Disagree
+  <input type="radio" name="q104" value="2"> Disagree
+  <input type="radio" name="q104" value="3"> Neutral
+  <input type="radio" name="q104" value="4"> Agree
+  <input type="radio" name="q104" value="5"> Strongly Agree
+</div>
+
+<!-- Question 105 -->
+<div class="question-block">
+  <label for="q105">I never challenge things</label><br>
+  <input type="radio" name="q105" value="1"> Strongly Disagree
+  <input type="radio" name="q105" value="2"> Disagree
+  <input type="radio" name="q105" value="3"> Neutral
+  <input type="radio" name="q105" value="4"> Agree
+  <input type="radio" name="q105" value="5"> Strongly Agree
+</div>
+
+<!-- Question 106 -->
+<div class="question-block">
+  <label for="q106">I am open about my feelings</label><br>
+  <input type="radio" name="q106" value="1"> Strongly Disagree
+  <input type="radio" name="q106" value="2"> Disagree
+  <input type="radio" name="q106" value="3"> Neutral
+  <input type="radio" name="q106" value="4"> Agree
+  <input type="radio" name="q106" value="5"> Strongly Agree
+</div>
+
+<!-- Question 107 -->
+<div class="question-block">
+  <label for="q107">I enjoy spending my free time with people</label><br>
+  <input type="radio" name="q107" value="1"> Strongly Disagree
+  <input type="radio" name="q107" value="2"> Disagree
+  <input type="radio" name="q107" value="3"> Neutral
+  <input type="radio" name="q107" value="4"> Agree
+  <input type="radio" name="q107" value="5"> Strongly Agree
+</div>
+
+<!-- Question 108 -->
+<div class="question-block">
+  <label for="q108">I tend to cry during movies</label><br>
+  <input type="radio" name="q108" value="1"> Strongly Disagree
+  <input type="radio" name="q108" value="2"> Disagree
+  <input type="radio" name="q108" value="3"> Neutral
+  <input type="radio" name="q108" value="4"> Agree
+  <input type="radio" name="q108" value="5"> Strongly Agree
+</div>
+
+<!-- Question 109 -->
+<div class="question-block">
+  <label for="q109">I am not bothered by messy people</label><br>
+  <input type="radio" name="q109" value="1"> Strongly Disagree
+  <input type="radio" name="q109" value="2"> Disagree
+  <input type="radio" name="q109" value="3"> Neutral
+  <input type="radio" name="q109" value="4"> Agree
+  <input type="radio" name="q109" value="5"> Strongly Agree
+</div>
+
+<!-- Question 110 -->
+<div class="question-block">
+  <label for="q110">I usually go with the majority to avoid controversy</label><br>
+  <input type="radio" name="q110" value="1"> Strongly Disagree
+  <input type="radio" name="q110" value="2"> Disagree
+  <input type="radio" name="q110" value="3"> Neutral
+  <input type="radio" name="q110" value="4"> Agree
+  <input type="radio" name="q110" value="5"> Strongly Agree
+</div>
+
+<!-- Question 111 -->
+<div class="question-block">
+  <label for="q111">I am interested in traditional ideas</label><br>
+  <input type="radio" name="q111" value="1"> Strongly Disagree
+  <input type="radio" name="q111" value="2"> Disagree
+  <input type="radio" name="q111" value="3"> Neutral
+  <input type="radio" name="q111" value="4"> Agree
+  <input type="radio" name="q111" value="5"> Strongly Agree
+</div>
+
+<!-- Question 112 -->
+<div class="question-block">
+  <label for="q112">I don't mind being the center of attention</label><br>
+  <input type="radio" name="q112" value="1"> Strongly Disagree
+  <input type="radio" name="q112" value="2"> Disagree
+  <input type="radio" name="q112" value="3"> Neutral
+  <input type="radio" name="q112" value="4"> Agree
+  <input type="radio" name="q112" value="5"> Strongly Agree
+</div>
+
+<!-- Question 113 -->
+<div class="question-block">
+  <label for="q113">I rarely worry</label><br>
+  <input type="radio" name="q113" value="1"> Strongly Disagree
+  <input type="radio" name="q113" value="2"> Disagree
+  <input type="radio" name="q113" value="3"> Neutral
+  <input type="radio" name="q113" value="4"> Agree
+  <input type="radio" name="q113" value="5"> Strongly Agree
+</div>
+
+<!-- Question 114 -->
+<div class="question-block">
+  <label for="q114">I enjoy spending time by myself</label><br>
+  <input type="radio" name="q114" value="1"> Strongly Disagree
+  <input type="radio" name="q114" value="2"> Disagree
+  <input type="radio" name="q114" value="3"> Neutral
+  <input type="radio" name="q114" value="4"> Agree
+  <input type="radio" name="q114" value="5"> Strongly Agree
+</div>
+
+<!-- Question 115 -->
+<div class="question-block">
+  <label for="q115">I'm a sensitive person</label><br>
+  <input type="radio" name="q115" value="1"> Strongly Disagree
+  <input type="radio" name="q115" value="2"> Disagree
+  <input type="radio" name="q115" value="3"> Neutral
+  <input type="radio" name="q115" value="4"> Agree
+  <input type="radio" name="q115" value="5"> Strongly Agree
+</div>
+
+<!-- Question 116 -->
+<div class="question-block">
+  <label for="q116">I try to follow rules</label><br>
+  <input type="radio" name="q116" value="1"> Strongly Disagree
+  <input type="radio" name="q116" value="2"> Disagree
+  <input type="radio" name="q116" value="3"> Neutral
+  <input type="radio" name="q116" value="4"> Agree
+  <input type="radio" name="q116" value="5"> Strongly Agree
+</div>
+
+<!-- Question 117 -->
+<div class="question-block">
+  <label for="q117">I'm an open book</label><br>
+  <input type="radio" name="q117" value="1"> Strongly Disagree
+  <input type="radio" name="q117" value="2"> Disagree
+  <input type="radio" name="q117" value="3"> Neutral
+  <input type="radio" name="q117" value="4"> Agree
+  <input type="radio" name="q117" value="5"> Strongly Agree
+</div>
+
+<!-- Question 118 -->
+<div class="question-block">
+  <label for="q118">I am not really interested in others' emotions and/or needs</label><br>
+  <input type="radio" name="q118" value="1"> Strongly Disagree
+  <input type="radio" name="q118" value="2"> Disagree
+  <input type="radio" name="q118" value="3"> Neutral
+  <input type="radio" name="q118" value="4"> Agree
+  <input type="radio" name="q118" value="5"> Strongly Agree
+</div>
+
+<!-- Question 119 -->
+<div class="question-block">
+  <label for="q119">I achieve best results in familiar situations</label><br>
+  <input type="radio" name="q119" value="1"> Strongly Disagree
+  <input type="radio" name="q119" value="2"> Disagree
+  <input type="radio" name="q119" value="3"> Neutral
+  <input type="radio" name="q119" value="4"> Agree
+  <input type="radio" name="q119" value="5"> Strongly Agree
+</div>
+
+<!-- Question 120 -->
+<div class="question-block">
+  <label for="q120">I am not a spontaneous person</label><br>
+  <input type="radio" name="q120" value="1"> Strongly Disagree
+  <input type="radio" name="q120" value="2"> Disagree
+  <input type="radio" name="q120" value="3"> Neutral
+  <input type="radio" name="q120" value="4"> Agree
+  <input type="radio" name="q120" value="5"> Strongly Agree
+</div>
+
+<!-- Question 121 -->
+<div class="question-block">
+  <label for="q121">I find it difficult to approach others</label><br>
+  <input type="radio" name="q121" value="1"> Strongly Disagree
+  <input type="radio" name="q121" value="2"> Disagree
+  <input type="radio" name="q121" value="3"> Neutral
+  <input type="radio" name="q121" value="4"> Agree
+  <input type="radio" name="q121" value="5"> Strongly Agree
+</div>
+
+<!-- Question 122 -->
+<div class="question-block">
+  <label for="q122">I am not afraid of providing criticism</label><br>
+  <input type="radio" name="q122" value="1"> Strongly Disagree
+  <input type="radio" name="q122" value="2"> Disagree
+  <input type="radio" name="q122" value="3"> Neutral
+  <input type="radio" name="q122" value="4"> Agree
+  <input type="radio" name="q122" value="5"> Strongly Agree
+</div>
+
+<!-- Question 123 -->
+<div class="question-block">
+  <label for="q123">I enjoy working on new and challenging tasks</label><br>
+  <input type="radio" name="q123" value="1"> Strongly Disagree
+  <input type="radio" name="q123" value="2"> Disagree
+  <input type="radio" name="q123" value="3"> Neutral
+  <input type="radio" name="q123" value="4"> Agree
+  <input type="radio" name="q123" value="5"> Strongly Agree
+</div>
+
+<!-- Question 124 -->
+<div class="question-block">
+  <label for="q124">I love to think up new ways of doing things</label><br>
+  <input type="radio" name="q124" value="1"> Strongly Disagree
+  <input type="radio" name="q124" value="2"> Disagree
+  <input type="radio" name="q124" value="3"> Neutral
+  <input type="radio" name="q124" value="4"> Agree
+  <input type="radio" name="q124" value="5"> Strongly Agree
+</div>
+
+<!-- Question 125 -->
+<div class="question-block">
+  <label for="q125">I start conversations</label><br>
+  <input type="radio" name="q125" value="1"> Strongly Disagree
+  <input type="radio" name="q125" value="2"> Disagree
+  <input type="radio" name="q125" value="3"> Neutral
+  <input type="radio" name="q125" value="4"> Agree
+  <input type="radio" name="q125" value="5"> Strongly Agree
+</div>
+
+<!-- Question 126 -->
+<div class="question-block">
+  <label for="q126">I believe that people are basically moral</label><br>
+  <input type="radio" name="q126" value="1"> Strongly Disagree
+  <input type="radio" name="q126" value="2"> Disagree
+  <input type="radio" name="q126" value="3"> Neutral
+  <input type="radio" name="q126" value="4"> Agree
+  <input type="radio" name="q126" value="5"> Strongly Agree
+</div>
+
+<!-- Question 127 -->
+<div class="question-block">
+  <label for="q127">I seldom joke around</label><br>
+  <input type="radio" name="q127" value="1"> Strongly Disagree
+  <input type="radio" name="q127" value="2"> Disagree
+  <input type="radio" name="q127" value="3"> Neutral
+  <input type="radio" name="q127" value="4"> Agree
+  <input type="radio" name="q127" value="5"> Strongly Agree
+</div>
+
+<!-- Question 128 -->
+<div class="question-block">
+  <label for="q128">Emotions don't get in my way to achieve goals</label><br>
+  <input type="radio" name="q128" value="1"> Strongly Disagree
+  <input type="radio" name="q128" value="2"> Disagree
+  <input type="radio" name="q128" value="3"> Neutral
+  <input type="radio" name="q128" value="4"> Agree
+  <input type="radio" name="q128" value="5"> Strongly Agree
+</div>
+
+<!-- Question 129 -->
+<div class="question-block">
+  <label for="q129">I do things that others find strange</label><br>
+  <input type="radio" name="q129" value="1"> Strongly Disagree
+  <input type="radio" name="q129" value="2"> Disagree
+  <input type="radio" name="q129" value="3"> Neutral
+  <input type="radio" name="q129" value="4"> Agree
+  <input type="radio" name="q129" value="5"> Strongly Agree
+</div>
+
+<!-- Question 130 -->
+<div class="question-block">
+  <label for="q130">I feel crushed by setbacks</label><br>
+  <input type="radio" name="q130" value="1"> Strongly Disagree
+  <input type="radio" name="q130" value="2"> Disagree
+  <input type="radio" name="q130" value="3"> Neutral
+  <input type="radio" name="q130" value="4"> Agree
+  <input type="radio" name="q130" value="5"> Strongly Agree
+</div>
+
+<!-- Question 131 -->
+<div class="question-block">
+  <label for="q131">I skip difficult words while reading</label><br>
+  <input type="radio" name="q131" value="1"> Strongly Disagree
+  <input type="radio" name="q131" value="2"> Disagree
+  <input type="radio" name="q131" value="3"> Neutral
+  <input type="radio" name="q131" value="4"> Agree
+  <input type="radio" name="q131" value="5"> Strongly Agree
+</div>
+
+<!-- Question 132 -->
+<div class="question-block">
+  <label for="q132">I enjoy being part of a group</label><br>
+  <input type="radio" name="q132" value="1"> Strongly Disagree
+  <input type="radio" name="q132" value="2"> Disagree
+  <input type="radio" name="q132" value="3"> Neutral
+  <input type="radio" name="q132" value="4"> Agree
+  <input type="radio" name="q132" value="5"> Strongly Agree
+</div>
+
+<!-- Question 133 -->
+<div class="question-block">
+  <label for="q133">I demonstrate a 'let it be' attitude</label><br>
+  <input type="radio" name="q133" value="1"> Strongly Disagree
+  <input type="radio" name="q133" value="2"> Disagree
+  <input type="radio" name="q133" value="3"> Neutral
+  <input type="radio" name="q133" value="4"> Agree
+  <input type="radio" name="q133" value="5"> Strongly Agree
+</div>
+
+<!-- Question 134 -->
+<div class="question-block">
+  <label for="q134">I am willing to talk about myself</label><br>
+  <input type="radio" name="q134" value="1"> Strongly Disagree
+  <input type="radio" name="q134" value="2"> Disagree
+  <input type="radio" name="q134" value="3"> Neutral
+  <input type="radio" name="q134" value="4"> Agree
+  <input type="radio" name="q134" value="5"> Strongly Agree
+</div>
+
+<!-- Question 135 -->
+<div class="question-block">
+  <label for="q135">I wait for others to lead the way</label><br>
+  <input type="radio" name="q135" value="1"> Strongly Disagree
+  <input type="radio" name="q135" value="2"> Disagree
+  <input type="radio" name="q135" value="3"> Neutral
+  <input type="radio" name="q135" value="4"> Agree
+  <input type="radio" name="q135" value="5"> Strongly Agree
+</div>
+
+<!-- Question 136 -->
+<div class="question-block">
+  <label for="q136">I don't worry about things that have already happened</label><br>
+  <input type="radio" name="q136" value="1"> Strongly Disagree
+  <input type="radio" name="q136" value="2"> Disagree
+  <input type="radio" name="q136" value="3"> Neutral
+  <input type="radio" name="q136" value="4"> Agree
+  <input type="radio" name="q136" value="5"> Strongly Agree
+</div>
+
+<!-- Question 137 -->
+<div class="question-block">
+  <label for="q137">I prefer group tasks over individual tasks</label><br>
+  <input type="radio" name="q137" value="1"> Strongly Disagree
+  <input type="radio" name="q137" value="2"> Disagree
+  <input type="radio" name="q137" value="3"> Neutral
+  <input type="radio" name="q137" value="4"> Agree
+  <input type="radio" name="q137" value="5"> Strongly Agree
+</div>
+
+<!-- Question 138 -->
+<div class="question-block">
+  <label for="q138">I am not easily frustrated</label><br>
+  <input type="radio" name="q138" value="1"> Strongly Disagree
+  <input type="radio" name="q138" value="2"> Disagree
+  <input type="radio" name="q138" value="3"> Neutral
+  <input type="radio" name="q138" value="4"> Agree
+  <input type="radio" name="q138" value="5"> Strongly Agree
+</div>
+
+<!-- Question 139 -->
+<div class="question-block">
+  <label for="q139">Rules guide my actions</label><br>
+  <input type="radio" name="q139" value="1"> Strongly Disagree
+  <input type="radio" name="q139" value="2"> Disagree
+  <input type="radio" name="q139" value="3"> Neutral
+  <input type="radio" name="q139" value="4"> Agree
+  <input type="radio" name="q139" value="5"> Strongly Agree
+</div>
+
+<!-- Question 140 -->
+<div class="question-block">
+  <label for="q140">I critique societal norms</label><br>
+  <input type="radio" name="q140" value="1"> Strongly Disagree
+  <input type="radio" name="q140" value="2"> Disagree
+  <input type="radio" name="q140" value="3"> Neutral
+  <input type="radio" name="q140" value="4"> Agree
+  <input type="radio" name="q140" value="5"> Strongly Agree
+</div>
+
+<!-- Question 141 -->
+<div class="question-block">
+  <label for="q141">I get angry easily</label><br>
+  <input type="radio" name="q141" value="1"> Strongly Disagree
+  <input type="radio" name="q141" value="2"> Disagree
+  <input type="radio" name="q141" value="3"> Neutral
+  <input type="radio" name="q141" value="4"> Agree
+  <input type="radio" name="q141" value="5"> Strongly Agree
+</div>
+
+<!-- Question 142 -->
+<div class="question-block">
+  <label for="q142">I want to be in charge</label><br>
+  <input type="radio" name="q142" value="1"> Strongly Disagree
+  <input type="radio" name="q142" value="2"> Disagree
+  <input type="radio" name="q142" value="3"> Neutral
+  <input type="radio" name="q142" value="4"> Agree
+  <input type="radio" name="q142" value="5"> Strongly Agree
+</div>
+
+<!-- Question 143 -->
+<div class="question-block">
+  <label for="q143">I rarely question what I'm told</label><br>
+  <input type="radio" name="q143" value="1"> Strongly Disagree
+  <input type="radio" name="q143" value="2"> Disagree
+  <input type="radio" name="q143" value="3"> Neutral
+  <input type="radio" name="q143" value="4"> Agree
+  <input type="radio" name="q143" value="5"> Strongly Agree
+</div>
+
+<!-- Question 144 -->
+<div class="question-block">
+  <label for="q144">I try not to think about the needy</label><br>
+  <input type="radio" name="q144" value="1"> Strongly Disagree
+  <input type="radio" name="q144" value="2"> Disagree
+  <input type="radio" name="q144" value="3"> Neutral
+  <input type="radio" name="q144" value="4"> Agree
+  <input type="radio" name="q144" value="5"> Strongly Agree
+</div>
+
+<!-- Question 145 -->
+<div class="question-block">
+  <label for="q145">I am more productive when working on shared tasks</label><br>
+  <input type="radio" name="q145" value="1"> Strongly Disagree
+  <input type="radio" name="q145" value="2"> Disagree
+  <input type="radio" name="q145" value="3"> Neutral
+  <input type="radio" name="q145" value="4"> Agree
+  <input type="radio" name="q145" value="5"> Strongly Agree
+</div>
+
+<!-- Question 146 -->
+<div class="question-block">
+  <label for="q146">I love to daydream</label><br>
+  <input type="radio" name="q146" value="1"> Strongly Disagree
+  <input type="radio" name="q146" value="2"> Disagree
+  <input type="radio" name="q146" value="3"> Neutral
+  <input type="radio" name="q146" value="4"> Agree
+  <input type="radio" name="q146" value="5"> Strongly Agree
+</div>
+
+<!-- Question 147 -->
+<div class="question-block">
+  <label for="q147">I take time to learn new concepts</label><br>
+  <input type="radio" name="q147" value="1"> Strongly Disagree
+  <input type="radio" name="q147" value="2"> Disagree
+  <input type="radio" name="q147" value="3"> Neutral
+  <input type="radio" name="q147" value="4"> Agree
+  <input type="radio" name="q147" value="5"> Strongly Agree
+</div>
+
+<!-- Question 148 -->
+<div class="question-block">
+  <label for="q148">I act as necessary regardless of others' emotions</label><br>
+  <input type="radio" name="q148" value="1"> Strongly Disagree
+  <input type="radio" name="q148" value="2"> Disagree
+  <input type="radio" name="q148" value="3"> Neutral
+  <input type="radio" name="q148" value="4"> Agree
+  <input type="radio" name="q148" value="5"> Strongly Agree
+</div>
+
+<!-- Question 149 -->
+<div class="question-block">
+  <label for="q149">I amuse my friends</label><br>
+  <input type="radio" name="q149" value="1"> Strongly Disagree
+  <input type="radio" name="q149" value="2"> Disagree
+  <input type="radio" name="q149" value="3"> Neutral
+  <input type="radio" name="q149" value="4"> Agree
+  <input type="radio" name="q149" value="5"> Strongly Agree
+</div>
+
+<!-- Question 150 -->
+<div class="question-block">
+  <label for="q150">I take time out for myself</label><br>
+  <input type="radio" name="q150" value="1"> Strongly Disagree
+  <input type="radio" name="q150" value="2"> Disagree
+  <input type="radio" name="q150" value="3"> Neutral
+  <input type="radio" name="q150" value="4"> Agree
+  <input type="radio" name="q150" value="5"> Strongly Agree
+</div>
+
+<!-- Question 151 -->
+<div class="question-block">
+  <label for="q151">I come up with basic ideas</label><br>
+  <input type="radio" name="q151" value="1"> Strongly Disagree
+  <input type="radio" name="q151" value="2"> Disagree
+  <input type="radio" name="q151" value="3"> Neutral
+  <input type="radio" name="q151" value="4"> Agree
+  <input type="radio" name="q151" value="5"> Strongly Agree
+</div>
+
+<!-- Question 152 -->
+<div class="question-block">
+  <label for="q152">I respect and abide by societal values</label><br>
+  <input type="radio" name="q152" value="1"> Strongly Disagree
+  <input type="radio" name="q152" value="2"> Disagree
+  <input type="radio" name="q152" value="3"> Neutral
+  <input type="radio" name="q152" value="4"> Agree
+  <input type="radio" name="q152" value="5"> Strongly Agree
+</div>
+
+<!-- Question 153 -->
+<div class="question-block">
+  <label for="q153">I don't feel threatened easily</label><br>
+  <input type="radio" name="q153" value="1"> Strongly Disagree
+  <input type="radio" name="q153" value="2"> Disagree
+  <input type="radio" name="q153" value="3"> Neutral
+  <input type="radio" name="q153" value="4"> Agree
+  <input type="radio" name="q153" value="5"> Strongly Agree
+</div>
+
+<!-- Question 154 -->
+<div class="question-block">
+  <label for="q154">I am exacting in my work</label><br>
+  <input type="radio" name="q154" value="1"> Strongly Disagree
+  <input type="radio" name="q154" value="2"> Disagree
+  <input type="radio" name="q154" value="3"> Neutral
+  <input type="radio" name="q154" value="4"> Agree
+  <input type="radio" name="q154" value="5"> Strongly Agree
+</div>
+
+<!-- Question 155 -->
+<div class="question-block">
+  <label for="q155">I am good at spotting patterns</label><br>
+  <input type="radio" name="q155" value="1"> Strongly Disagree
+  <input type="radio" name="q155" value="2"> Disagree
+  <input type="radio" name="q155" value="3"> Neutral
+  <input type="radio" name="q155" value="4"> Agree
+  <input type="radio" name="q155" value="5"> Strongly Agree
+</div>
+
+<!-- Question 156 -->
+<div class="question-block">
+  <label for="q156">I am not easily annoyed</label><br>
+  <input type="radio" name="q156" value="1"> Strongly Disagree
+  <input type="radio" name="q156" value="2"> Disagree
+  <input type="radio" name="q156" value="3"> Neutral
+  <input type="radio" name="q156" value="4"> Agree
+  <input type="radio" name="q156" value="5"> Strongly Agree
+</div>
+
+<!-- Question 157 -->
+<div class="question-block">
+  <label for="q157">I don't forgive easily</label><br>
+  <input type="radio" name="q157" value="1"> Strongly Disagree
+  <input type="radio" name="q157" value="2"> Disagree
+  <input type="radio" name="q157" value="3"> Neutral
+  <input type="radio" name="q157" value="4"> Agree
+  <input type="radio" name="q157" value="5"> Strongly Agree
+</div>
+
+<!-- Question 158 -->
+<div class="question-block">
+  <label for="q158">I am afraid that I will do the wrong thing</label><br>
+  <input type="radio" name="q158" value="1"> Strongly Disagree
+  <input type="radio" name="q158" value="2"> Disagree
+  <input type="radio" name="q158" value="3"> Neutral
+  <input type="radio" name="q158" value="4"> Agree
+  <input type="radio" name="q158" value="5"> Strongly Agree
+</div>
+
+<!-- Question 159 -->
+<div class="question-block">
+  <label for="q159">I enjoy bringing people together</label><br>
+  <input type="radio" name="q159" value="1"> Strongly Disagree
+  <input type="radio" name="q159" value="2"> Disagree
+  <input type="radio" name="q159" value="3"> Neutral
+  <input type="radio" name="q159" value="4"> Agree
+  <input type="radio" name="q159" value="5"> Strongly Agree
+</div>
+
+<!-- Question 160 -->
+<div class="question-block">
+  <label for="q160">I consider others' emotional reaction before making decisions</label><br>
+  <input type="radio" name="q160" value="1"> Strongly Disagree
+  <input type="radio" name="q160" value="2"> Disagree
+  <input type="radio" name="q160" value="3"> Neutral
+  <input type="radio" name="q160" value="4"> Agree
+  <input type="radio" name="q160" value="5"> Strongly Agree
+</div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+<div id="results" style="display: none;">
+<h2>Global Domains</h2>
+    <!-- Apprehension -->
+    <div class="global-domain" id="apprehension">
+      <h3>Apprehension</h3>
+      <div class="scale-labels">
+        <span>Low Anxiety</span>
+        <span>High Anxiety</span>
+      </div>
+      <div class="scale-container">
+        <div class="scale-bar">
+          <div class="fill-bar" id="apprehension-bar"></div>
+        </div>
+        <span class="score" id="apprehension-score">0</span>
+      </div>
+      <p><div id="apprehension-description"></div></p>
+    </div>
+
+    <!-- Autonomy -->
+    <div class="global-domain" id="autonomy">
+      <h3>Autonomy</h3>
+      <div class="scale-labels">
+        <span>Accommodating</span>
+        <span>Independent</span>
+      </div>
+      <div class="scale-container">
+        <div class="scale-bar">
+          <div class="fill-bar" id="autonomy-bar"></div>
+        </div>
+        <span class="score" id="autonomy-score">0</span>
+      </div>
+      <p><div id="autonomy-description"></div></p>
+    </div>
+
+    <!-- Determination -->
+    <div class="global-domain" id="determination">
+      <h3>Determination</h3>
+      <div class="scale-labels">
+        <span>Open Minded</span>
+        <span>Tough Minded</span>
+      </div>
+      <div class="scale-container">
+        <div class="scale-bar">
+          <div class="fill-bar" id="determination-bar"></div>
+        </div>
+        <span class="score" id="determination-score">0</span>
+      </div>
+      <p><div id="determination-description"></div></p>
+    </div>
+
+    <!-- Extraversion -->
+    <div class="global-domain" id="extraversion">
+      <h3>Extraversion</h3>
+      <div class="scale-labels">
+        <span>Introverted</span>
+        <span>Extroverted</span>
+      </div>
+      <div class="scale-container">
+        <div class="scale-bar">
+          <div class="fill-bar" id="extraversion-bar"></div>
+        </div>
+        <span class="score" id="extraversion-score">0</span>
+      </div>
+      <p><div id="extraversion-description"></div></p>
+    </div>
+
+    <!-- Will Power -->
+    <div class="global-domain" id="willpower">
+      <h3>Will Power</h3>
+      <div class="scale-labels">
+        <span>Unconstrained</span>
+        <span>Self-Disciplined</span>
+      </div>
+      <div class="scale-container">
+        <div class="scale-bar">
+          <div class="fill-bar" id="willpower-bar"></div>
+        </div>
+        <span class="score" id="willpower-score">0</span>
+      </div>
+      <p><div id="willpower-description"></div></p>
+    </div>
+</div>
+
+
+    <div>
+      <canvas id="globalDomainsChart" width="400" height="200"></canvas>
+      <canvas id="sixteenPersonalityDimensionsChart" width="400" height="200"></canvas>
+      <canvas id="myRadarChart" width="400" height="400"></canvas>
+    </div>
+    <div id="report">
+      <!-- <h2>Personality Report</h2> -->
+      <!-- Placeholder for Chart.js charts -->
+      
+   </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>

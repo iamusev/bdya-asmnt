@@ -1,0 +1,310 @@
+[
+    {
+        "first_name": "nnnn",
+        "family_name": "nnn",
+        "age": "222",
+        "gender": "Male",
+        "email_address": "asdas@asdasd.ad",
+        "last_name": "",
+        "assessmentType": "assess-16pd-r2",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmdhbml6YXRpb25JZCI6IjYxZWQyZGNkYzdjZjljNmI5OGQzYzQwZiIsImFzc2Vzc21lbnRJZCI6IjY2ZTE5YTZkOTIxMGJjMDAwZTcxYjA5OCIsImFzc2Vzc21lbnRSZWZJZCI6IjY3MGM0Nzc5MzRiZjVkMDAxNThjMDRjZiIsImVtYWlsIjpudWxsLCJ1c2VybmFtZSI6IjEyMzQ1NTU1Iiwic3RhcnRlZEF0IjoiMjAyMy0wOS0xNFQwMDowMDowMC4wMDBaIiwiZW5kZWRBdCI6IjIwMjUtMTAtMTRUMDA6MDA6MDAuMDAwWiIsImlhdCI6MTcyODg1Nzk3NywiZXhwIjoxNzYwMzkzOTc3fQ.HXFUnfsKGEU29GdPHEm-vltH9sZy5cnWg9LI1XzTVZQ",
+        "individualAnswersGrouped": [],
+        "reportType": "ADS",
+        "timeStamp": "13-10-2024, 22:21:07",
+        "totalQuestions": 0,
+        "product": {
+            "_id": "66e19b4078d2b8000e68fea9",
+            "name": "ASSESS 16PD (R2)",
+            "price": 2,
+            "description": "This is ASSESS 16PD assessment. It typically takes 30 - 45 minutes to complete.\r\nThis is a Personality assessment that identifies your personality traits and behavioral tendencies. Therefore, there is no right or wrong answer.هذا هو تقييم التوظيف المهني. يستغرق التقييم عادةً 30 - 45 دقيقة لإكماله.\r\nالهدف من هذا التقييم هو تحديد سماتك الشخصية وميولك السلوكية. بالتالي، فلا توجد اجابة صحيحة أو خاطئة.\r\n.\r\n",
+            "testURL": "66e19a6d9210bc000e71b098",
+            "productType": "ADS",
+            "reportType": "assess-16pd-r2",
+            "imagePath": "https://talenthub-r2-images.storage.googleapis.com/e3443d20-7041-11ef-98b4-6f6fc864ed6b_ASSESS 16PD (R2)",
+            "horizontalImagePath": "https://storage.googleapis.com/talenthub-r2-images/assessment%20horizontal%20default.svg",
+            "deactivated": false,
+            "createdAt": "2024-09-11T13:29:36.487Z",
+            "updatedAt": "2024-09-11T13:29:36.487Z",
+            "__v": 0
+        },
+        "organization": {
+            "_id": "66e2f925213048000e966810",
+            "authorizedProducts": [
+                "64abeca6f67bc9000e8bd8cf",
+                "66e19b4078d2b8000e68fea9"
+            ],
+            "accountNumber": "433322215439",
+            "name": "Ministry of Education",
+            "industry": "Education",
+            "numOfEmployees": "2000-4999",
+            "imagePath": "https://talenthub-r2-images.storage.googleapis.com/710110e0-7112-11ef-b899-2b46d9d9bed2_Ministry of Education ",
+            "activated": true,
+            "creditUnits": 9685,
+            "totalCreditUnits": 10000,
+            "legacyId": "",
+            "createdAt": "2024-09-12T14:22:29.509Z",
+            "updatedAt": "2024-10-14T22:54:06.153Z",
+            "__v": 0,
+            "smtpLimit": null
+        },
+        "username": "12345555",
+        "Extraversion": 0,
+        "Autonomy": 0,
+        "Determination": 0,
+        "Will_Power": 0,
+        "Apprehension": 0,
+        "globalDimensions": {
+            "Extraversion": {
+                "name": "Extraversion",
+                "rawScore": 0,
+                "score": 0,
+                "long-dimension": "Extraversion",
+                "definition": "An inclination to participate in social activities, be socially desirable, and invest in initiating and maintaining social relationships."
+            },
+            "Autonomy": {
+                "name": "Autonomy",
+                "rawScore": 0,
+                "score": 0,
+                "long-dimension": "Autonomy",
+                "definition": "A tendency to think and act independently, influence others, and make own decisions."
+            },
+            "Determination": {
+                "name": "Determination",
+                "rawScore": 0,
+                "score": 0,
+                "long-dimension": "Determination",
+                "definition": "A tendency to have objective thought processes, and inclination towards traditional and practical patterns of thinking; refraining from subjectivity."
+            },
+            "Will_Power": {
+                "name": "Will_Power",
+                "rawScore": 0,
+                "score": 0,
+                "long-dimension": "Will Power",
+                "definition": "A tendency to have internal self discipline, and being able to restrain personal impulses."
+            },
+            "Apprehension": {
+                "name": "Apprehension",
+                "rawScore": 0,
+                "score": 0,
+                "long-dimension": "Apprehension",
+                "definition": "A tendency to experience a fluctuating emotional state, and difficulty in dealing with and managing stress."
+            }
+        },
+        "Warmth": 0,
+        "Intellect": 0,
+        "Imagination": 0,
+        "Restlessness": 0,
+        "Distrust": 0,
+        "Reserve": 0,
+        "Rule_Bounded": 0,
+        "Boldness": 0,
+        "Orderliness": 0,
+        "Independence": 0,
+        "Emotional_Resilience": 0,
+        "Liveliness": 0,
+        "Influence": 0,
+        "Sensitivity": 0,
+        "Anxiety": 0,
+        "Readiness_To_Change": 0,
+        "reportLanguage": "en",
+        "dimensions": [
+            {
+                "name": "Warmth",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Warmth",
+                "definition": "A person&#39;s willingness for interpersonal closeness, and inclination to socialize and to involve themselves in surrounding relationships.",
+                "description": "{{name}} is friendly and outgoing. Enjoys spending time with others but may need alone time from time to time and therefore become distant in order to recharge mentally."
+            },
+            {
+                "name": "Intellect",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Intellect",
+                "definition": "A person&#39;s tendency to abstract thinking to be able to conceptualize and understand hypothetical scenarios; rather than concrete thinking which relies on literal interpretations.",
+                "description": "{{name}}&#39;s scores indicate s/he has moderate abilities when it comes to problem solving, and performs relatively well in an academic context"
+            },
+            {
+                "name": "Imagination",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Imagination",
+                "definition": "A person&#39;s orientation towards creative and out of the box thinking, in contrast to traditional thinking patterns.",
+                "description": "{{name}} is comfortable with generating new ideas, but ideas may lack imagination occasionally. S/he may be conservative at times, and lean towards more conventional and traditional ideas."
+            },
+            {
+                "name": "Restlessness",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Restlessness",
+                "definition": "A person&#39;s tendency to feel mentally and emotionally strained, and easily triggered by others.",
+                "description": "{{name}} tends to be impatient and restless during times of stress or when big deadlines come up. That being said s/he usually has a somewhat calm demeanor."
+            },
+            {
+                "name": "Distrust",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Distrust",
+                "definition": "A person&rsquo;s tendency to question others&rsquo; motives and to be skeptical of their intentions.&nbsp;",
+                "description": "{{name}} tends to be somewhat cautious when it comes to trusting others. S/he may take time to warm up to people, and may doubt others&#39; underlying motives in some contexts."
+            },
+            {
+                "name": "Reserve",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Reserve",
+                "definition": "A person&#39;s tendency to withhold disclosing private information with others, and protect oneself from metaphorical walls.&nbsp;",
+                "description": "{{name}} tends to keep personal information to oneself. Yet, when probed or asked to share; s/he may disclose some information conservatively/partially."
+            },
+            {
+                "name": "Rule_Bounded",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Rule Bounded",
+                "definition": "A person&#39;s tendency to adopt and conscientiously follow society&#39;s accepted standards of behavior, community rules and cultural values.",
+                "description": "{{name}} respects the rules and follows them after closely inspecting and analyzing them, which means that s/he may reject or deny certain rules if they do conflict with her/his own opinions/beliefs."
+            },
+            {
+                "name": "Boldness",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Boldness",
+                "definition": "A person&#39;s tendency to be brave, confident, take chances, and seek adventures.",
+                "description": "{{name}} seems to be somewhat adventurous. S/he enjoys being the center of attention at times, yet may be shy in some occasions. S/he is somewhat sensitive towards others&#39; criticisms."
+            },
+            {
+                "name": "Orderliness",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Orderliness",
+                "definition": "A person&rsquo;s tendency to plan ahead for things, to be organized and striving for perfection.",
+                "description": "{{name}} tends to be a moderately orderly person. S/he enjoys planning ahead of time, yet sometimes could tolerate unplanned events and situations."
+            },
+            {
+                "name": "Independence",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Independence",
+                "definition": "A person&#39;s preference for autonomy and control over personal decisions and actions.",
+                "description": "{{name}} is open to be a part of a team, but may sometimes be uncomfortable working on shared tasks. S/he likes to rely on oneself in decisions and actions, yet may also be accepting to be a follower when needed."
+            },
+            {
+                "name": "Emotional_Resilience",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Emotional Resilience",
+                "definition": "A person&#39;s ability to keep control under pressure and stressful times; and recover from upsets and maintain a balanced temperament.",
+                "description": "{{name}} tends to be able to maintain a calm and levelled temperament most of the time. S/he is able to control own levels of stress, to a great extent, when in challenging situations. May be able to maintain own mood without being affected by external factors, yet inconsistently."
+            },
+            {
+                "name": "Liveliness",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Liveliness",
+                "definition": "A person&#39;s tendency to express themselves enthusiastically and to pursue spontaneity.",
+                "description": "{{name}} knows how to have fun and enjoy her/himself in moderation. S/he might initiate contact with other people, yet inconsistently. S/he knows how to be balance between spontaneity and caution based on the situation."
+            },
+            {
+                "name": "Influence",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Influence",
+                "definition": "A person&#39;s tendency to be in charge and in control of the contextual dynamics, lead rather than be led, and have power over others.",
+                "description": "{{name}} is comfortable with going against the grain, yet without creating conflict with others. S/he tends to be cautious to keep harmony while having a strong impact on others."
+            },
+            {
+                "name": "Sensitivity",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Sensitivity",
+                "definition": "A person&#39;s tendency to be compassionate and considerate of own and others&#39; feelings, and prioritizing them when making decisions.",
+                "description": "Being in-tuned to others emotional states may come easily to {{name}}, and s/he may be considered to kind and compassionate towards others. That being said, {{name}} doesn&#39;t always let others&#39; emotional states get in the way of her/him making objective decisions."
+            },
+            {
+                "name": "Anxiety",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Anxiety",
+                "definition": "A person&#39;s tendency to worry, feel uneasy, and become nervous about current and future events.",
+                "description": "{{name}} has moderate levels of anxiety. S/he seems to be somewhat secure and self-satisfied. S/he tends to worry within an acceptable range, and maintains his/her calm when dealing with uncertainty."
+            },
+            {
+                "name": "Readiness_To_Change",
+                "value": 0,
+                "descriptionLevel": "Average",
+                "long_dimension": "Readiness To Change",
+                "definition": "A person&#39;s willingness to accept change, untraditional viewpoints, and demonstrating readiness to adapt approach to situational needs.",
+                "description": "{{name}} is relatively open to change and embraces new status quo. Nevertheless, s/he demonstrates some reluctance at times; balancing between being pro to accepting change and seeking predictability."
+            }
+        ],
+        "introduction": {
+            "id": 6358,
+            "narrative_trait": "introduction",
+            "narrative_trait_value": "",
+            "assessment_type": "16PD-r2",
+            "narrative_type": "description",
+            "language": "en",
+            "narrative_string": "<p>This report provides a comprehensive analysis of the candidate&rsquo;s scores across the <strong>Five Global Personality Domains</strong> and <strong>Sixteen Personality Dimensions</strong>. The 16PD questionnaire, a detailed measure of personality, helps explain individual behaviors in various settings. The Global Domains are broad categories composed of these sixteen personality dimensions.</p>\n\n<p></p>\n\n<p>The report is structured into several key sections. Firstly, it addresses the Global Dimensions, followed by the Sixteen Personality Dimensions. Next, it offers a Profile Interpretation, which is an in-depth analysis of the candidate&#39;s personality traits. The report then highlights the Top 3 Personality Traits and the Bottom 3 Personality Traits, providing insights into the candidate&#39;s strongest and weakest characteristics. Finally, a Development Plan is presented, offering suggestions for personal and professional growth.</p>\n\n<p></p>\n\n<p><strong><u>These sections are reported as follows:</u></strong><br />\n&nbsp; &nbsp;A. Global Dimensions<br />\n&nbsp; &nbsp;B. The Sixteen Personality Dimensions<br />\n&nbsp; &nbsp;C.&nbsp;Profile Interpretation<br />\n&nbsp; &nbsp;D.&nbsp;Top 3 Personality Traits<br />\n&nbsp; &nbsp;E.&nbsp;Bottom 3 Personality Traits<br />\n&nbsp; &nbsp;F.&nbsp;Development Plan</p>\n\n<p>This report has a shelf-life of 24 months and should be treated confidentially. The accuracy of this report depends on the frankness with which {name} answered the questions as well as their self-awareness. Major personal or work-related events may invalidate {name}&rsquo;s report, and accordingly a new assessment should be completed.<br />\n&nbsp;</p>\n",
+            "is_definition": "1"
+        },
+        "validity": {
+            "id": 6363,
+            "narrative_trait": "validity_indicators",
+            "narrative_trait_value": "",
+            "assessment_type": "16PD-r2",
+            "narrative_type": "description",
+            "language": "en",
+            "narrative_string": "<p>The below measures indicate the extent to which the report can be relied on to interpret results. Some patterns of answers may invalidate results (e.g. random or neutral answers to all questions).</p>\n\n<p><strong>Impression Management</strong><br />\nRespondent social desirability (I.e. tendency to create a positive self-image)</p>\n\n<p><strong>Compliance</strong><br />\nThe tendency of the respondent to agree with the statements regardless of its content.</p>\n\n<p><strong>Irregularity</strong><br />\nRespondent tendency to answer &ldquo;neutral&rdquo; to most of the statements</p>\n",
+            "is_definition": "1"
+        },
+        "important_considerations": {
+            "important_considerations_intro": "This section provides general considerations and reminders to interviewers with respect to use of ASSESS 16PD.",
+            "important_considerations_chance": "Assessment is occasionally subject to chance. Assessees may occasionally misunderstand the question, may interpret the meaning of words incorrectly, or may choose by mistake a response she/he did not intend to choose. If there are doubts about whether the person has had adequate understanding of the assessment instructions, then a complete reassessment is required, given that the reassessment does not provide the assessee with an unfair advantage. Alternatively, other evidAence gathered from interview, academic achievement, experience, behavioural or situational performance can provide assistance in decision making. In all cases great care must be exercised in interpretation of all evidence.",
+            "important_considerations_extreme": "Extreme high or low scores are uncommon and may involve irregularity. When the profile of assessment scores shows one or more pronounced highs or lows, then some inconsistency may be evident. A skillfully conducted interview is necessary to find out the reason for the inconsistency, without upsetting the candidate by inadvertently suggesting that the assessee did not provide frank or genuine responses. Where an extreme score is scrutinized for validity and reliability, an interview must be considerately handled to avoid giving the impression that a single assessment has been sufficient to disqualify the candidate for a job or impair her/his development potential.",
+            "important_considerations_general": "It is important to explain procedures and practices before administering ASSESS 16PD, and ensure that the candidate understands these procedures and practices. Assessment results should not be offered as a reason for non-acceptance of a candidate. ASSESS assessments and the question inventories should never be used in isolation to justify redundancy decisions. Such use could be construed as unfair."
+        },
+        "top3": [
+            {
+                "name": "Imagination",
+                "long_dimension": "Imagination",
+                "benefits": "<ul>\n\t<li>Being comfortable with the process of ideation will lead to the creation of new and modern ideas that can break the mold.&nbsp;</li>\n\t<li>Coming up with out-of-the-box ideas can help with finding solutions to problems that were previously thought to be too hard to solve.&nbsp;</li>\n\t<li>Being imaginative can help foster a creative environment that could inspire others to come up with innovative ideas therefore initiative collective progress.&nbsp;</li>\n</ul>\n",
+                "score": 0
+            },
+            {
+                "name": "Intellect",
+                "long_dimension": "Intellect",
+                "benefits": "<ul>\n\t<li>Being an abstract thinker can aid in the solving of complex problems as conceptualizing the possible scenarios in order to delve deep and find an appropriate solution is highly probable for those who possess this trait.</li>\n\t<li>Following an objective and unbiased thought process is a common practice, where opinions and conclusions are based on deep analytical thinking rooted in factual evidence.</li>\n\t<li>The importance of acquiring more knowledge in order to be able to be introduced to novel concepts and ideas will help in the improvement of the quality of work outcomes.</li>\n</ul>\n",
+                "score": 0
+            },
+            {
+                "name": "Warmth",
+                "long_dimension": "Warmth",
+                "benefits": "<ul>\n\t<li>Being outgoing and sociable enhances collaborative work experiences and increases the likelihood of a positive end result within a team through a sense of camaraderie.&nbsp;</li>\n\t<li>Being open to establishing and growing interpersonal relationships helps improve morale and satisfaction as it creates an individualized experience for each employee.&nbsp;</li>\n\t<li>Being adept at establishing relationships with others improves the work culture and decreases the chances of possible conflict.&nbsp;</li>\n</ul>\n",
+                "score": 0
+            }
+        ],
+        "bottom3": [
+            {
+                "name": "Anxiety",
+                "long_dimension": "Anxiety",
+                "Organizational_Support": "<ul>\n\t<li>Check in with the employee regularly to give them reassurance and offer constructive feedback; which would reduce anxiety about their performance and progress on deliverables.</li>\n\t<li>Provide them with tools and resources to manage their own time more efficiently, and make them feel more in control of their workload and reduce the anxiety of meeting deadlines.</li>\n\t<li>Clearly define tasks and expectations by providing specific instructions and communicating desired outcomes, to reduce uncertainty.</li>\n</ul>\n",
+                "score": 0,
+                "Tips_For_Self_Development": "<ul>\n\t<li>Identify triggers that contribute to your anxiety and take steps to limit your exposure to them when possible.&nbsp;</li>\n\t<li>Avoid setting unrealistic expectations for yourself or others, as this can contribute to feelings of anxiety and pressure.</li>\n\t<li>Notice when negative thoughts or worries arise and challenge them with evidence-based reasoning.&nbsp;</li>\n</ul>\n"
+            },
+            {
+                "name": "Readiness_To_Change",
+                "long_dimension": "Readiness To Change",
+                "Organizational_Support": "<ul>\n\t<li>Communicate the multifaceted aspects of change; including its rational, anticipated outcomes, potential challenges, and opportunities; to familiarize them with the scope and implications.&nbsp;</li>\n\t<li>Encourage employee participation and involvement in the change process by seeking their input, ide&nbsp;&nbsp; &nbsp;as, and feedback; which will make them embrace change and take ownership.</li>\n\t<li>Clearly define roles, responsibilities, and expectations related to the change to help employees understand what is required of them; and thus, make it easier for them to transition to new ways of working.&nbsp;</li>\n</ul>\n",
+                "score": 0,
+                "Tips_For_Self_Development": "<ul>\n\t<li>Question your existing beliefs, assumptions, and perspectives, and be open to considering alternative viewpoints and ideas.</li>\n\t<li>Surround yourself with people who have different backgrounds, experiences, and viewpoints than your own. &nbsp;</li>\n\t<li>Weigh the potential benefits and new opportunities that could follow from implementing new concepts, as this can provide motivation and clarity.</li>\n</ul>\n"
+            },
+            {
+                "name": "Sensitivity",
+                "long_dimension": "Sensitivity",
+                "Organizational_Support": "<ul>\n\t<li>Provide support and validation where the individual feels safe expressing their emotions without fear of judgment or criticism.</li>\n\t<li>Promote assertiveness to help them communicate their needs, boundaries, and concerns effectively.</li>\n\t<li>Model healthy emotional expression in your own interactions and responses.</li>\n</ul>\n",
+                "score": 0,
+                "Tips_For_Self_Development": "<ul>\n\t<li>Practice active listening to fully understand others&rsquo; perspectives and demonstrate empathy towards their feelings and experiences.</li>\n\t<li>Cultivate emotional intelligence by being aware of your own emotions and recognizing how they influence your interactions with others.</li>\n\t<li>Validate others&#39; emotions by acknowledging and accepting their feelings without judgment or criticism.&nbsp;</li>\n</ul>\n"
+            }
+        ]
+    }
+]

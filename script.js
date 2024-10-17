@@ -1,4 +1,90 @@
+let currentQuestionIndex = 0;
+  const pgquestions = document.querySelectorAll('.question-block');
+  const pageCounter = document.getElementById('pageCounter');
+  //const prevBtn = document.getElementById('prevBtn');
+  //const nextBtn = document.getElementById('nextBtn');
+  const submitBtnContainer = document.getElementById('submitBtnContainer');
+
+  // Hide all questions initially
+  function showQuestion(index) {
+    pgquestions.forEach((question, i) => {
+      question.style.display = i === index ? 'block' : 'none';
+    });
+
+    // Update pagination count dynamically
+    pageCounter.textContent = `Question ${index + 1} of ${pgquestions.length}`;
+    
+    //prevBtn.disabled = index === 0;
+    //nextBtn.disabled = index === pgquestions.length - 1;
+    submitBtnContainer.style.display = index === pgquestions.length - 1 ? 'block' : 'none'; // Show "Submit" on the last question
+  }
+
+  // Event listener for when a user selects an option
+  function setupOptionListeners() {
+    pgquestions.forEach((question, index) => {
+      const inputs = question.querySelectorAll('input[type="radio"]');
+      inputs.forEach(input => {
+        input.addEventListener('change', () => {
+          // When an option is selected, go to the next question
+          if (index < pgquestions.length - 1) {
+            currentQuestionIndex++;
+            showQuestion(currentQuestionIndex);
+          } else {
+            //alert('You have completed the quiz!');
+            // Optionally submit the form or show a final page
+          }
+        });
+      });
+    });
+  }
+
+  // Initialize the first question
+  showQuestion(currentQuestionIndex);
+  setupOptionListeners();
+
+let currentPage = 1;
+  const questionsPerPage = 1;
+  
+  // Select all question blocks
+  const questions = document.querySelectorAll('.question-block');
+  const totalPages = Math.ceil(questions.length / questionsPerPage);
+
+  // Show questions for the current page
+  function showPage(page) {
+    // Hide all questions
+    questions.forEach((question, index) => {
+      question.style.display = 'none';
+    });
+
+    // Calculate which questions to show
+    const start = (page - 1) * questionsPerPage;
+    const end = start + questionsPerPage;
+
+    for (let i = start; i < end && i < questions.length; i++) {
+      questions[i].style.display = 'block';
+    }
+
+    // Update button states
+  }
+
+  // Event listeners for the buttons
+ 
+  // Initialize first page
+  showPage(currentPage);
+
+let charts = {};  // Object to store multiple charts
+function createMultipleCharts(chartId, data, labels) {
+  const ctx = document.getElementById(chartId).getContext('2d');
+
+  // If the chart with the specific ID already exists, destroy it
+  if (charts[chartId]) {
+    charts[chartId].destroy();
+  }
+}
+
 document.getElementById('personalityForm').addEventListener('submit', function(event) {
+  
+
   event.preventDefault();
 
   // Collect responses
@@ -10,7 +96,6 @@ document.getElementById('personalityForm').addEventListener('submit', function(e
   formData.forEach((value, key) => {
     responses[key] = parseInt(value);
   });
-  console.log("resonses collected from form");
 
   
   const questionMapping = {
@@ -595,123 +680,159 @@ new Chart(ctx, {
 
   // Profile Interpretation (basic textual interpretation)
   const interpretation = `
-    <h3>Profile Interpretation</h3>
-    <p><strong>Anxiety:</strong> ${getInterpretation(scores['Anxiety'], 'anxiety')}</p>
-    <p><strong>Boldness:</strong> ${getInterpretation(scores['Boldness'], 'boldness')}</p>
-    <p><strong>Distrust:</strong> ${getInterpretation(scores['Distrust'], 'distrust')}</p>
-    <p><strong>Emotional Resilience:</strong> ${getInterpretation(scores['Emotional Resilience'], 'emotional_Resilience')}</p>
-    <p><strong>Imagination:</strong> ${getInterpretation(scores['Imagination'], 'imagination')}</p>
-    <p><strong>Autonomy:</strong> ${getInterpretation(scores['Independence'], 'independence')}</p>
-    <p><strong>Influence:</strong> ${getInterpretation(scores['Influence'], 'influence')}</p>
-    <p><strong>Intellect:</strong> ${getInterpretation(scores['Intellect'], 'intellect')}</p>
-    <p><strong>Liveliness:</strong> ${getInterpretation(scores['Liveliness'], 'liveliness')}</p>
-    <p><strong>Orderliness:</strong> ${getInterpretation(scores['Orderliness'], 'orderliness')}</p>
-    <p><strong>Readiness to Change:</strong> ${getInterpretation(scores['Readiness to Change'], 'readiness_to_change')}</p>
-    <p><strong>Willpower:</strong> ${getInterpretation(scores['Reserve'], 'reserve')}</p>
-    <p><strong>Restlessness:</strong> ${getInterpretation(scores['Restlessness'], 'restlessness')}</p>
-    <p><strong>Rule-Bounded:</strong> ${getInterpretation(scores['Rule-Bounded'], 'rule_bounded')}</p>
-    <p><strong>Sensitivity:</strong> ${getInterpretation(scores['Sensitivity'], 'sensitivity')}</p>
-    <p><strong>Warmth:</strong> ${getInterpretation(scores['Warmth'], 'warmth')}</p>
+    <h3>Profile Interpretation</h3><br><div class="trait-report">
+    <div class="trait-header"><span class="trait-title">Anxiety</span><span id="anxietyArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Anxiety'], 'anxiety')}</div>
+    <div class="trait-header"><span class="trait-title">Boldness</span><span id="boldnessArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Boldness'], 'boldness')}</div>
+    <div class="trait-header"><span class="trait-title">Distrust</span><span id="distrustArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Distrust'], 'distrust')}</div>
+    <div class="trait-header"><span class="trait-title">Emotional Resilience</span><span id="emotional_ResilienceArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Emotional Resilience'], 'emotional_Resilience')}</div>
+    <div class="trait-header"><span class="trait-title">Imagination</span><span id="imaginationArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Imagination'], 'imagination')}</div>
+    <div class="trait-header"><span class="trait-title">Independence</span><span id="independenceArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Independence'], 'independence')}</div>
+    <div class="trait-header"><span class="trait-title">Influence</span><span id="influenceArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Influence'], 'influence')}</div>
+    <div class="trait-header"><span class="trait-title">Intellect</span><span id="intellectArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Intellect'], 'intellect')}</div>
+    <div class="trait-header"><span class="trait-title">Liveliness</span><span id="livelinessArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Liveliness'], 'liveliness')}</div>
+    <div class="trait-header"><span class="trait-title">Orderliness</span><span id="orderlinessArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Orderliness'], 'orderliness')}</div>
+    <div class="trait-header"><span class="trait-title">Readiness to Change</span><span id="readiness_to_changeArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Readiness to Change'], 'readiness_to_change')}</div>
+    <div class="trait-header"><span class="trait-title">Reserve</span><span id="reserveArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Reserve'], 'reserve')}</div>
+    <div class="trait-header"><span class="trait-title">Restlessness</span><span id="restlessnessArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Restlessness'], 'restlessness')}</div>
+    <div class="trait-header"><span class="trait-title">Rule-Bounded</span><span id="rule_boundedArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Rule-Bounded'], 'rule_bounded')}</div>
+    <div class="trait-header"><span class="trait-title">Sensitivity</span><span id="sensitivityArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Sensitivity'], 'sensitivity')}</div>
+    <div class="trait-header"><span class="trait-title">Warmth</span><span id="warmthArrow" class="trait-arrow">▲</span></div><div class="trait-description"> ${getInterpretation(scores['Warmth'], 'warmth')}</div>
+    </div>
   `;
 
   reportDiv.innerHTML += interpretation;
 }
 
+// Function to dynamically update the arrow based on the user's score
+function setTraitArrow(score, arrowElementId) {
+  const arrowElement = document.getElementById(arrowElementId);
+  
+  if (score >= 12) {
+    // Positive score: Show up arrow (▲)
+    arrowElement.textContent = '▲';
+    arrowElement.style.color = 'green';  // Green color for upward arrow
+  } else if(score >= 7){
+    arrowElement.textContent = '-';
+    arrowElement.style.color = 'gray';  // Gray color for upward arrow
+  }
+  else {
+    // Negative score: Show down arrow (▼)
+    arrowElement.textContent = '▼';
+    arrowElement.style.color = 'red';  // Red color for downward arrow
+  }
+}
+
 function getInterpretation(score, dimension) {
   if (dimension === 'anxiety') {
-    if (score > 7) return "High levels of anxiety, prone to worry and stress.";
-    if (score > 4) return "Moderate anxiety, with occasional stress.";
-    return "Low anxiety, typically calm and composed.";
+    if (score >= 12) return "You are highly aware of potential dangers and tend to be careful in planning and decision-making, which can help you avoid risks.";
+    if (score >= 7) return "You occasionally feel anxious but generally manage stress well in most situations.";
+    return "You are prone to worrying excessively, which can lead to feelings of insecurity and difficulty in managing stress.";
+    setTraitArrow(score, 'anxietyArrow');  // Sets arrows
   }
   
   if (dimension === 'boldness') {
-    if (score > 7) return "Highly confident, often takes risks.";
-    if (score > 4) return "Moderate confidence, willing to take calculated risks.";
-    return "Low boldness, tends to be cautious.";
+    if (score >= 12) return "You are confident in taking risks and speaking your mind, even in the face of opposition. You excel in leadership roles and enjoy taking the initiative.";
+    if (score >= 7) return "You are comfortable with both taking the lead and stepping back when needed, depending on the context.";
+    return "You may avoid taking risks and often hesitate to speak up, possibly missing opportunities to assert yourself.";
+    setTraitArrow(score, 'boldnessArrow');  // Sets arrows
   }
   
   if (dimension === 'distrust') {
-    if (score > 7) return "Highly distrustful, often skeptical of others.";
-    if (score > 4) return "Moderate distrust, occasionally skeptical.";
-    return "Low distrust, generally trusting.";
+    if (score >= 12) return "You are cautious about others' intentions and prefer to analyze situations before trusting people. This protects you from being taken advantage of.";
+    if (score >= 7) return "You strike a balance between trust and skepticism, depending on the person and situation.";
+    return "You may find it hard to trust others, which could lead to feelings of isolation or difficulty in building strong relationships.";
+    setTraitArrow(score, 'distrustArrow');  // Sets arrows
   }
   
   if (dimension === 'emotional_Resilience') {
-    if (score > 7) return "Highly stable, able to handle stress well.";
-    if (score > 4) return "Moderately stable, occasional emotional ups and downs.";
-    return "Low Resilience, prone to emotional swings.";
+    if (score >= 12) return "You handle stress and adversity well, bouncing back from setbacks with a positive attitude. Challenges motivate you rather than discourage you.";
+    if (score >= 7) return "You are generally calm under pressure but may occasionally struggle with particularly difficult situations.";
+    return "You are prone to feeling overwhelmed by stress and might find it challenging to recover from emotional setbacks.";
+    setTraitArrow(score, 'emotional_ResilienceArrow');  // Sets arrows
   }
   
   if (dimension === 'imagination') {
-    if (score > 7) return "Highly outgoing, enjoys social interaction.";
-    if (score > 4) return "Moderately sociable, enjoys some social settings.";
-    return "Prefers solitude and small gatherings.";
+    if (score >= 12) return "You are highly creative and often come up with innovative solutions and ideas. You thrive in environments that allow for out-of-the-box thinking.";
+    if (score >= 7) return "You appreciate both practical solutions and creative approaches, depending on the situation.";
+    return "You tend to rely on traditional methods and may struggle with abstract or unconventional ideas.";
+    setTraitArrow(score, 'imaginationArrow');  // Sets arrows
   }
 
   if (dimension === 'independence') {
-    if (score > 7) return "Highly independent, enjoys making decisions.";
-    if (score > 4) return "Moderately independent, sometimes seeks advice.";
-    return "Prefers structure and guidance in decision-making.";
+    if (score >= 12) return "You are self-reliant and confident in making decisions without relying on others. You value autonomy and prefer working on your own.";
+    if (score >= 7) return "You enjoy working independently but also appreciate collaboration when needed.";
+    return "You may struggle with taking initiative and often depend on others for direction and decision-making.";
+    setTraitArrow(score, 'independenceArrow');  // Sets arrows
   }
 
   if (dimension === 'influence') {
-    if (score > 7) return "Highly influential, enjoys leading others.";
-    if (score > 4) return "Moderately influential, leads in certain situations.";
-    return "Prefers to follow rather than lead.";
+    if (score >= 12) return "You are skilled at persuading others and enjoy leading discussions. People naturally look to you for guidance and support.";
+    if (score >= 7) return "You can take on leadership roles when necessary but are also comfortable being part of the team.";
+    return "You may find it challenging to assert your opinions, and others might overlook your contributions in group settings.";
+    setTraitArrow(score, 'influenceArrow');  // Sets arrows
   }
 
   if (dimension === 'intellect') {
-    if (score > 7) return "Highly intellectual, enjoys abstract thinking.";
-    if (score > 4) return "Moderately intellectual, enjoys some mental challenges.";
-    return "Prefers concrete and straightforward tasks.";
+    if (score >= 12) return "You enjoy intellectual challenges and love exploring complex ideas and concepts. You thrive in environments that stimulate your mind.";
+    if (score >= 7) return "You appreciate intellectual discussions but do not always seek them out. You prefer a balanced approach.";
+    return "You might struggle with complex or abstract thinking, preferring to focus on concrete and practical tasks.";
+    setTraitArrow(score, 'intellectArrow');  // Sets arrows
   }
 
   if (dimension === 'liveliness') {
-    if (score > 7) return "Highly energetic and lively, enjoys excitement.";
-    if (score > 4) return "Moderately lively, enjoys occasional excitement.";
-    return "Prefers calm and quiet activities.";
+    if (score >= 12) return "You are full of energy and enthusiasm. You enjoy social events and have a positive outlook on life, often spreading joy to those around you.";
+    if (score >= 7) return "You are generally positive but may prefer quieter moments from time to time.";
+    return "You may feel lethargic or unmotivated, finding it difficult to engage in social activities or maintain a positive outlook.";
+    setTraitArrow(score, 'livelinessArrow');  // Sets arrows
   }
 
   if (dimension === 'orderliness') {
-    if (score > 7) return "Highly organized and systematic in approach.";
-    if (score > 4) return "Moderately organized, can handle some disorder.";
-    return "Prefers a flexible and unstructured approach.";
+    if (score >= 12) return "You are very organized and disciplined. You plan your tasks meticulously and are rarely caught off-guard by unexpected events.";
+    if (score >= 7) return "You value structure but can adapt to a more flexible environment when necessary.";
+    return "You might struggle with maintaining an organized system and could feel overwhelmed by the need for structure.";
+    setTraitArrow(score, 'orderlinessArrow');  // Sets arrows
   }
 
   if (dimension === 'readiness_to_change') {
-    if (score > 7) return "Highly adaptable, enjoys new experiences.";
-    if (score > 4) return "Moderately open to change, but enjoys Resilience.";
-    return "Prefers routine and is resistant to change.";
+    if (score >= 12) return "You embrace new ideas and are quick to adapt to change. You enjoy experimenting with different approaches and are open to innovation.";
+    if (score >= 7) return "You are open to change but prefer a structured approach, making adjustments gradually.";
+    return "You may resist change and prefer sticking to familiar routines and methods, even when change is necessary.";
+    setTraitArrow(score, 'readiness_to_changeArrow');  // Sets arrows
   }
 
   if (dimension === 'reserve') {
-    if (score > 7) return "Highly disciplined and shows strong self-control.";
-    if (score > 4) return "Moderately disciplined, with occasional lapses.";
-    return "Low self-discipline, finds it hard to stick to goals.";
+    if (score >= 12) return "You are selective in forming close relationships and prefer meaningful interactions with a few individuals rather than superficial ones with many.";
+    if (score >= 7) return "You are comfortable with both alone time and social interactions, striking a balance between deep conversations and casual exchanges.";
+    return "You may find it difficult to open up to others and could come across as distant or difficult to approach.";
+    setTraitArrow(score, 'reserveArrow');  // Sets arrows
   }
 
   if (dimension === 'restlessness') {
-    if (score > 7) return "Highly restless, finds it hard to relax.";
-    if (score > 4) return "Moderately restless, enjoys some downtime.";
-    return "Calm and relaxed, enjoys a slower pace.";
+    if (score >= 12) return "You are driven and always on the move, seeking new opportunities and challenges. Your energy helps you achieve your goals quickly.";
+    if (score >= 7) return "You are generally content but may feel the occasional urge for excitement or a change of pace.";
+    return "You may feel unsettled or dissatisfied, constantly searching for something new and finding it difficult to stick to one path.";
+    setTraitArrow(score, 'restlessnessArrow');  // Sets arrows
   }
 
   if (dimension === 'rule_bounded') {
-    if (score > 7) return "Highly rule-abiding, follows structure.";
-    if (score > 4) return "Moderately rule-bound, follows some rules.";
-    return "Prefers flexibility over strict rules.";
+    if (score >= 12) return "You have a strong sense of responsibility and prefer to follow rules and guidelines closely. Others see you as reliable and dependable.";
+    if (score >= 7) return "You follow rules when necessary but also know when to bend them to adapt to situations.";
+    return "You may have difficulty conforming to rules and might struggle with authority or rigid structures.";
+    setTraitArrow(score, 'rule_boundedArrow');  // Sets arrows
   }
 
   if (dimension === 'sensitivity') {
-    if (score > 7) return "Highly sensitive, attuned to others' emotions.";
-    if (score > 4) return "Moderately sensitive, cares about others' feelings.";
-    return "Less sensitive, focuses on practical matters.";
+    if (score >= 12) return "You are empathetic and in tune with the emotions of others. People often come to you for support, and you excel in compassionate roles.";
+    if (score >= 7) return "You are understanding of others' feelings but are also able to distance yourself when necessary.";
+    return "You may struggle to cope with your own emotions or the emotions of others, finding it overwhelming at times.";
+    setTraitArrow(score, 'sensitivityArrow');  // Sets arrows
   }
 
   if (dimension === 'warmth') {
-    if (score > 7) return "Highly warm and caring, enjoys close relationships.";
-    if (score > 4) return "Moderately warm, enjoys certain social bonds.";
-    return "Less warm, prefers independence over emotional connections.";
+    if (score >= 12) return "You are open and approachable, making it easy for others to connect with you. You enjoy nurturing relationships and value close connections.";
+    if (score >= 7) return "You are friendly but may prefer to keep a healthy distance from others, depending on the situation.";
+    return "You may come across as distant or cold, finding it challenging to form or maintain close relationships.";
+    setTraitArrow(score, 'warmthArrow');  // Sets arrows
   }
 }
 
